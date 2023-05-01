@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DINO ENDLESS</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+      body{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        font-family: 'PT Mono', monospace;
+      }
+
+      .counters{
+        display: flex;
+        justify-content: space-between;
+      }
+      .playingFor{
+        width: 50%;
+        height: 100%;
+        text-align: center;
+      }
+      .timeRemaining{
+        width: 50%;
+        height: 100%;
+        text-align: center;
+      }
+      .counter{
+        font-size: 3em !important;
+      }
+      .counters figure{
+        display: inline-block;
+      }
+
+      .counters figure figcaption{
+        font-size: 1.2em;
+      }
+    </style>
+</head>
+<body>
+  <canvas id="canvas" width="1200" height="600"></canvas>
+
+  <div class="counters">
+    <div class="playingFor">
+      <h1>Time passed</h1>
+        <figure>
+          <span id="pfD" class="counter"></span>
+          <figcaption>Days</figcaption>
+        </figure>
+        <figure>
+          <span id="pfH" class="counter"></span>
+          <figcaption>Hours</figcaption>
+        </figure>
+        <figure>
+          <span id="pfM" class="counter"></span>
+          <figcaption>Minutes</figcaption>
+        </figure>
+        <figure>
+          <span id="pfS" class="counter" style="color: red;"></span>
+          <figcaption>Seconds</figcaption>
+        </figure>
+    </div>
+    <div class="timeRemaining">
+      <h1>Time Remaining</h1>
+
+      <figure>
+        <span id="trD" class="counter"></span>
+        <figcaption>Days</figcaption>
+      </figure>
+      <figure>
+        <span id="trH" class="counter"></span>
+        <figcaption>Hours</figcaption>
+      </figure>
+      <figure>
+        <span id="trM" class="counter"></span>
+        <figcaption>Minutes</figcaption>
+      </figure>
+      <figure>
+        <span id="trS" class="counter" style="color: red;"></span>
+        <figcaption>Seconds</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <script src="js/counters.js"></script>
+  <script src="js/dino.js"></script>
+  <script src="js/bird.js"></script>
+  <script src="js/cactus.js"></script>
+  <script src="js/terrain.js"></script>
+  <script src="js/score.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

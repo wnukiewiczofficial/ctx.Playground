@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoinGame</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <body>
+    <div class="logo">
+      <a href="/" style="text-decoration: none; color: black;"><h1 id="title">CoinGame</h1></a>
+      <p id="phrase">Test your predictive skills</p>
+    </div>
+
+    <div class="social">
+      <a href="#" class="facebook"><img src="images/facebook.svg"></a>
+      <a href="#" class="twitter"><img src="images/twitter.svg"></a>
+      <a href="#" class="linkedin"><img src="images/linkedin.svg"></a>
+
+      <script type="text/javascript">
+        let fb = document.querySelector(".facebook");
+        let twitter = document.querySelector(".twitter");
+        let linkedin = document.querySelector(".linkedin");
+
+        let url = encodeURI(document.location.href);
+        let postTitle = "CoinGame";
+        fb.setAttribute('href', `https://www.facebook.com/sharer.php?u=${url}`);
+        twitter.setAttribute('href', `https://twitter.com/share?url=${url}&text=${postTitle}`);
+        linkedin.setAttribute('href', `https://www.linkedin.com/shareArticle?url=${url}&title=${postTitle}`);
+      </script>
+    </div>
+
+
+    <header class="page_title">
+      <h1>Terms Of Use</h1>
+    </header>
+    <main class="page_content">
+      <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sagittis augue eget nisl tincidunt tempus. Sed bibendum convallis iaculis. Integer cursus dolor id nibh sagittis, sit amet blandit eros tempus. Maecenas commodo nisl dui, et pellentesque magna convallis vel. Suspendisse finibus, neque sit amet luctus congue, nibh orci rutrum est, a suscipit lacus augue id libero. Nullam placerat luctus velit, ut tristique erat rhoncus non. Nulla sed pretium lacus, sit amet pretium velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus est augue, tempus id tellus ut, rhoncus dictum velit. Suspendisse hendrerit lorem diam, et fringilla libero venenatis sed. Quisque iaculis, risus eget rutrum feugiat, orci ex lobortis diam, quis lobortis libero est vel lorem. Nam mattis vitae mauris sit amet rhoncus. Nullam et felis in augue iaculis egestas.</p>
+    </main>
+
+    <footer>
+      <h1 id="copyright">© CoingGame.com</h1>
+      <div class="pages">
+        <a href="about.html" id="about">About</a>
+        <a href="terms.html" id="terms">Terms of Use</a>
+        <a href="contact.html" id="contact">Contact</a>
+      </div>
+    </footer>
+
+    <script src="js/coin.js"></script>
+    <script src="js/sketch.js"></script>
+  </body>
+</html>

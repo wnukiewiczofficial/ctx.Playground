@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoinGame</title>
+
+    <script src="vendor/p5.min.js"></script>
+    <script src="vendor/p5.dom.min.js"></script>
+    <script src="vendor/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <body>
+    <div class="logo">
+      <a href="/" style="text-decoration: none; color: black;"><h1 id="title">CoinGame</h1></a>
+      <p id="phrase">Test your predictive skills</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <h1>True</h1>
+        <h2 id="positive" style="color: green;">0</h2>
+      </div>
+      <div class="stat">
+        <h1>False</h1>
+        <h2 id="wrong" style="color: red;">0</h2>
+      </div>
+      <div class="stat">
+        <h1>Score</h1>
+        <h2 id="score">0</h2>
+      </div>
+    </div>
+
+    <div class="prediction">
+      <h2>Pick out your prediction by clicking on below image</h2>
+      <div class="choices">
+        <img src="images/front.png" id="front_img" onclick="Choose('front')">
+        <img src="images/back.png" id="back_img" onclick="Choose('back')">
+      </div>
+      <div id="button_div">
+        <button type="button" id="flip" onclick="coin.flip()">Flip!</button>
+      </div>
+    </div>
+
+    <div class="social">
+      <a href="#" class="facebook"><img src="images/facebook.svg"></a>
+      <a href="#" class="twitter"><img src="images/twitter.svg"></a>
+      <a href="#" class="linkedin"><img src="images/linkedin.svg"></a>
+
+      <script type="text/javascript">
+        let fb = document.querySelector(".facebook");
+        let twitter = document.querySelector(".twitter");
+        let linkedin = document.querySelector(".linkedin");
+
+        let url = encodeURI(document.location.href);
+        let postTitle = "CoinGame";
+        fb.setAttribute('href', `https://www.facebook.com/sharer.php?u=${url}`);
+        twitter.setAttribute('href', `https://twitter.com/share?url=${url}&text=${postTitle}`);
+        linkedin.setAttribute('href', `https://www.linkedin.com/shareArticle?url=${url}&title=${postTitle}`);
+      </script>
+    </div>
+
+    <footer>
+      <h1 id="copyright">© CoingGame.com</h1>
+      <div class="pages">
+        <a href="about.html" id="about">About</a>
+        <a href="terms.html" id="terms">Terms of Use</a>
+        <a href="contact.html" id="contact">Contact</a>
+      </div>
+    </footer>
+
+    <script src="js/coin.js"></script>
+    <script src="js/sketch.js"></script>
+  </body>
+</html>
