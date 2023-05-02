@@ -1,33 +1,38 @@
 import Sketch from "react-p5";
-import "p5/lib/addons/p5.dom";
 import "p5/lib/addons/p5.sound";
 import Ball from "./ball";
+import { useEffect } from "react";
 
 export default function ChaseTheBall() {
-  var scene = "menu";
+  let scene = "menu";
+  let balls = [];
+  let level = 1;
+  let score = 0;
+  let timer = 0;
+  let timerInterval;
 
-  var balls = [];
-
-  var level = 1;
-
-  var score = 0;
-
-  var timer = 0;
-  var timerInterval;
+  useEffect(() => {
+    return () => {
+      canvas;
+      clearInterval(timerInterval);
+    };
+  }, []);
 
   const setup = (p5, canvasParentRef) => {
-    const cnv = p5.createCanvas(
-      canvasParentRef.parentElement.clientWidth,
-      canvasParentRef.parentElement.clientHeight
-    );
+    const cnv = p5
+      .createCanvas(
+        canvasParentRef.parentElement.clientWidth,
+        canvasParentRef.parentElement.clientHeight
+      )
+      .parent(canvasParentRef.parentElement);
     balls[0] = new Ball(p5, level);
 
-    cnv.mouseReleased = () => {
+    cnv.mouseReleased((event) => {
       if (scene == "gameover" || scene == "win") {
         scene = "menu";
         timer = 0;
       }
-    };
+    });
   };
 
   const draw = (p5) => {
@@ -64,13 +69,13 @@ export default function ChaseTheBall() {
 
       if (distance <= balls[i].d / 2) {
         if (i == 0) {
-          if (level >= 4) balls.push(new Ball(p5));
+          if (level >= 4) balls.push(new Ball(p5, level));
           score++;
-          balls.shift(p5);
-          balls.push(new Ball(p5));
+          balls.shift();
+          balls.push(new Ball(p5, level));
         } else {
           scene = "gameover";
-          window.clearInterval(timerInterval);
+          clearInterval(timerInterval);
         }
       }
     }
@@ -89,12 +94,12 @@ export default function ChaseTheBall() {
       scene = "win";
       score = 0;
       balls = [];
-      balls[0] = new Ball(p5);
-      window.clearInterval(timerInterval);
+      balls[0] = new Ball(p5, level);
+      clearInterval(timerInterval);
     }
 
     p5.fill(255);
-    p5.noStroke(p5);
+    p5.noStroke();
     p5.textAlign(p5.LEFT, p5.TOP);
     p5.textSize(p5.width * 0.03);
     p5.text("Level " + level, 0, 0);
@@ -102,7 +107,7 @@ export default function ChaseTheBall() {
 
   function Score(p5) {
     p5.fill(255);
-    p5.noStroke(p5);
+    p5.noStroke();
     p5.textAlign(p5.CENTER, p5.TOP);
     p5.textSize(p5.width * 0.03);
     p5.text("Score " + score, p5.width / 2, 0);
@@ -110,7 +115,7 @@ export default function ChaseTheBall() {
 
   function Timer(p5) {
     p5.fill(255);
-    p5.noStroke(p5);
+    p5.noStroke();
     p5.textAlign(p5.RIGHT, p5.TOP);
     p5.textSize(p5.width * 0.03);
     p5.text("Time " + timer, p5.width, 0);
@@ -118,12 +123,12 @@ export default function ChaseTheBall() {
 
   function drawMenu(p5) {
     p5.fill(255);
-    p5.noStroke(p5);
+    p5.noStroke();
     p5.textAlign(p5.CENTER, p5.TOP);
     p5.textSize(p5.width * 0.1);
-    p5.text("Chase The Ball", p5.width / 2, p5.textAscent(p5));
+    p5.text("Chase The Ball", p5.width / 2, p5.textAscent());
 
-    p5.fill(p5);
+    p5.noFill();
     p5.stroke(255);
     p5.strokeWeight(4);
     p5.rect(
@@ -143,7 +148,7 @@ export default function ChaseTheBall() {
         p5.mouseY <= p5.height / 2 + (p5.height * 0.15) / 2
       ) {
         scene = "game";
-        timerInterval = window.setInterval(() => {
+        timerInterval = setInterval(() => {
           timer++;
         }, 1000);
       }

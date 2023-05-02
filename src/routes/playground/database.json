@@ -18,7 +18,8 @@
       {
         "name": "canvas"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "Fill the triangle",
@@ -39,7 +40,8 @@
       {
         "name": "canvas"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "Music Visualizer",
@@ -60,7 +62,8 @@
       {
         "name": "canvas"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "Paint",
@@ -81,7 +84,8 @@
       {
         "name": "canvas"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "Trader",
@@ -102,7 +106,8 @@
       {
         "name": "canvas"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "Tic Tac Toe",
@@ -123,7 +128,8 @@
       {
         "name": "canvas"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "Clock Stock",
@@ -144,7 +150,8 @@
       {
         "name": "canvas"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "M letter",
@@ -165,7 +172,8 @@
       {
         "name": "canvas"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "Chase the ball",
@@ -186,7 +194,8 @@
       {
         "name": "canvas"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "The Casino",
@@ -204,7 +213,8 @@
       {
         "name": "p5js"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "Coin Flip",
@@ -219,7 +229,8 @@
       {
         "name": "p5js"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "Delivery Truck",
@@ -234,7 +245,8 @@
       {
         "name": "p5js"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "Dino AI",
@@ -246,7 +258,8 @@
       {
         "name": "p5js"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "Flappy P5",
@@ -261,7 +274,8 @@
       {
         "name": "p5js"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "Minesweeper",
@@ -276,7 +290,8 @@
       {
         "name": "p5js"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "Wise Owl",
@@ -291,7 +306,8 @@
       {
         "name": "p5js"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "Platform Hills",
@@ -306,7 +322,8 @@
       {
         "name": "p5js"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "The Pong",
@@ -321,7 +338,8 @@
       {
         "name": "p5js"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "Shark bits",
@@ -336,7 +354,8 @@
       {
         "name": "p5js"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "Radar Chart",
@@ -351,7 +370,8 @@
       {
         "name": "p5js"
       }
-    ]
+    ],
+    "type": "game"
   },
   {
     "title": "Tag Game",
@@ -366,6 +386,7 @@
       {
         "name": "p5js"
       }
-    ]
+    ],
+    "type": "game"
   }
 ]

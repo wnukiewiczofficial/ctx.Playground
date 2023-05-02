@@ -59,6 +59,7 @@ export default function NavBar({ gameDatabase }) {
                   setSelectedTab={setSelectedTab}
                   setNavOpen={setNavOpen}
                   selected={i === selectedTab}
+                  gameType={game.type}
                 >
                   {game.title}
                 </GameTab>
@@ -79,6 +80,7 @@ export default function NavBar({ gameDatabase }) {
                   id={i}
                   setSelectedTab={setSelectedTab}
                   selected={i === selectedTab}
+                  gameType={game.type}
                 >
                   {game.title}
                 </GameTab>

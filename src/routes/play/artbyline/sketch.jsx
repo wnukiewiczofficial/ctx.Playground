@@ -27,12 +27,13 @@ export default function ArtByLine() {
         bounced = true;
       }
 
-      if (bounced)
+      if (bounced) {
         this.col = p5.color(
           p5.floor(p5.random(0, 256)),
           p5.floor(p5.random(0, 256)),
           p5.floor(p5.random(0, 256))
         );
+      }
     },
     flyaround: function () {
       this.x += this.dir.x * this.speed;
@@ -49,7 +50,7 @@ export default function ArtByLine() {
     p5.createCanvas(
       canvasParentRef.parentElement.clientWidth,
       canvasParentRef.parentElement.clientHeight
-    ).parent(canvasParentRef);
+    ).parent(canvasParentRef.parentElement);
     p5.background(50);
     ball.x = p5.width / 2;
     ball.y = p5.height / 2;

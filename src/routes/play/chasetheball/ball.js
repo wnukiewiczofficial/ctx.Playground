@@ -10,6 +10,7 @@ export default class Ball {
       p5.random(0, 256),
       level < 5 ? 255 : p5.floor(p5.random(10, 256))
     );
+
     if (level >= 3) {
       this.dir = p5.createVector(
         p5.floor(p5.random(-1, 2)),
