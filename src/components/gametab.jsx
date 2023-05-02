@@ -24,12 +24,16 @@ export default function GameTab({
       {selected ? (
         <h1 className="flex items-center gap-4 bg-accent text-main lg:rounded-r-lg lg:pl-6">
           {children}
-          <span className="text-sm font-normal">{gameType}</span>
+          <span className="text-sm font-normal">
+            {gameType === "done" ? gameType : ""}
+          </span>
         </h1>
       ) : (
         <h1 className="flex items-center gap-4 bg-main text-accent hover:bg-accent/20 hover:text-accentTwo transition-all duration-200 lg:rounded-r-lg lg:pl-6">
           {children}
-          <span className="text-sm font-normal">{gameType}</span>
+          <span className="text-sm font-normal">
+            {gameType === "done" ? gameType : ""}
+          </span>
         </h1>
       )}
     </div>

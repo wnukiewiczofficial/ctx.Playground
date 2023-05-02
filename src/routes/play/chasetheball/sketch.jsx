@@ -13,7 +13,6 @@ export default function ChaseTheBall() {
 
   useEffect(() => {
     return () => {
-      canvas;
       clearInterval(timerInterval);
     };
   }, []);

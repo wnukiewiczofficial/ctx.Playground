@@ -7,8 +7,8 @@ class Wheel {
 
   draw() {
     // Indicator triangles
-    push();
-    translate(this.cx, this.cy);
+    p5.push();
+    window.p5.translate(this.cx, this.cy);
     rotate(PI / 8 + t);
     p5.stroke(120, 120, 120);
     p5.strokeWeight(this.r * 0.008);
@@ -19,21 +19,21 @@ class Wheel {
       rotate(PI / 4);
       triangle(0, 0, -l * 0.48, -this.r * 0.91, l * 0.48, -this.r * 0.91);
     }
-    pop();
+    p5.pop();
 
     //Front
-    push();
+    p5.push();
     p5.fill(255);
     p5.stroke(120, 120, 120);
     p5.strokeWeight(this.r * 0.008);
     rotate(t);
-    translate(this.cx, this.cy);
-    ellipse(0, 0, this.r * 1.5, this.r * 1.5);
-    pop();
+    window.p5.translate(this.cx, this.cy);
+    p5.ellipse(0, 0, this.r * 1.5, this.r * 1.5);
+    p5.pop();
 
     // Value triangles
-    push();
-    translate(this.cx, this.cy);
+    p5.push();
+    window.p5.translate(this.cx, this.cy);
     rotate(PI / 8 + t);
     p5.noStroke();
     p5.strokeWeight(2);
@@ -54,11 +54,11 @@ class Wheel {
         -val * this.r * (0.695 / 9)
       );
     }
-    pop();
+    p5.pop();
 
     // Labels and scale
-    push();
-    translate(this.cx, this.cy);
+    p5.push();
+    window.p5.translate(this.cx, this.cy);
     rotate(PI / 8 + t);
 
     p5.stroke(120, 120, 120);
@@ -69,27 +69,27 @@ class Wheel {
       p5.strokeWeight(this.r * 0.005);
       p5.line(0, 0, 0, -this.r * 0.75);
       p5.textSize(this.r * 0.04);
-      textAlign(p5.CENTER, p5.CENTER);
+      p5.textAlign(p5.CENTER, p5.CENTER);
 
       for (let x = 1; x <= 9; x++) {
-        push();
+        p5.push();
         p5.line(
           -this.r * 0.01,
           x * this.r * 0.083,
           this.r * 0.01,
           x * this.r * 0.083
         );
-        translate(this.r * 0.03, x * this.r * 0.079);
+        window.p5.translate(this.r * 0.03, x * this.r * 0.079);
         rotate(PI);
         p5.fill(120, 120, 120);
         p5.strokeWeight(this.r * 0.004);
         if (i == 3) p5.text(x, 0, 0);
-        pop();
+        p5.pop();
       }
 
       rotate(PI / 8);
       p5.textSize(this.r * 0.09);
-      textAlign(p5.CENTER, p5.TOP);
+      p5.textAlign(p5.CENTER, p5.TOP);
       p5.fill(255);
       let txt;
       switch (i) {
@@ -123,6 +123,6 @@ class Wheel {
       }
       p5.text(txt, 0, -this.r + p5.textAscent() * 1.5);
     }
-    pop();
+    p5.pop();
   }
 }

@@ -75,7 +75,7 @@ class Boss {
     image(boss_img, this.x, this.y, this.w, this.h);
 
     //HP indicator
-    push();
+    p5.push();
 
     p5.fill(0, 200, 0);
     p5.noStroke();
@@ -96,6 +96,6 @@ class Boss {
       this.w * 0.5,
       this.h * 0.05
     );
-    pop();
+    p5.pop();
   }
 }

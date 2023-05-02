@@ -56,11 +56,11 @@ class Selector {
       selector.green = color.g;
       selector.blue = color.b;
     }
-    ctx.p5.fillStyle = `rgb(${this.red}, ${this.green}, ${this.blue})`;
+    ctx.fillStyle = `rgb(${this.red}, ${this.green}, ${this.blue})`;
     ctx.shadowColor = started ? "rgb(32, 117, 16)" : "#bd2626";
     ctx.shadowBlur = 15;
     ctx.shadowOffset = 6;
-    ctx.p5.fillRect(this.x, this.y, this.w, this.h);
+    ctx.fillRect(this.x, this.y, this.w, this.h);
     ctx.restore();
   }
 }

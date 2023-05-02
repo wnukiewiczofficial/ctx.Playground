@@ -16,12 +16,12 @@ class Cell {
     if (this.isBomb) this.closeBombs = -1;
     else {
       let total = 0;
-      for (var xoff = -1; xoff <= 1; xoff++) {
-        var i = this.i + xoff;
+      for (let xoff = -1; xoff <= 1; xoff++) {
+        let i = this.i + xoff;
         if (i < 0 || i >= cells[this.i].length) continue;
 
-        for (var yoff = -1; yoff <= 1; yoff++) {
-          var j = this.j + yoff;
+        for (let yoff = -1; yoff <= 1; yoff++) {
+          let j = this.j + yoff;
           if (j < 0 || j >= cells.length) continue;
           if (cells[i][j].isBomb) {
             total++;
@@ -40,12 +40,12 @@ class Cell {
       if (this.marked) flagCount--;
       if (this.marked && this.isBomb) correctFlags--;
       if (this.closeBombs == 0) {
-        for (var xoff = -1; xoff <= 1; xoff++) {
-          var i = this.i + xoff;
+        for (let xoff = -1; xoff <= 1; xoff++) {
+          let i = this.i + xoff;
           if (i < 0 || i >= cells[this.i].length) continue;
 
-          for (var yoff = -1; yoff <= 1; yoff++) {
-            var j = this.j + yoff;
+          for (let yoff = -1; yoff <= 1; yoff++) {
+            let j = this.j + yoff;
             if (j < 0 || j >= cells.length) continue;
             if (!cells[i][j].isVisible) {
               cells[i][j].discover();
@@ -59,33 +59,33 @@ class Cell {
   draw() {
     if (this.isVisible) {
       ctx.save();
-      ctx.p5.fillStyle = "#fcba03";
+      ctx.fillStyle = "#fcba03";
       ctx.strokeStyle = "#FFFFFF";
       ctx.lineWidth = 1;
-      ctx.p5.fillRect(this.x, this.y, this.w * 2, this.h * 2);
+      ctx.fillRect(this.x, this.y, this.w * 2, this.h * 2);
       ctx.strokeRect(this.x, this.y, this.w * 2, this.h * 2);
 
       if (this.isBomb) {
         ctx.save();
-        ctx.p5.fillStyle = "#8c2300";
+        ctx.fillStyle = "#8c2300";
         ctx.strokeStyle = "#FFFFFF";
         ctx.lineWidth = 8;
-        ctx.p5.fillRect(this.x, this.y, this.w * 2, this.h * 2);
+        ctx.fillRect(this.x, this.y, this.w * 2, this.h * 2);
         ctx.strokeRect(this.x, this.y, this.w * 2, this.h * 2);
         ctx.drawImage(bombImg, this.x, this.y, this.w * 2, this.h * 2);
         ctx.restore();
       }
 
       if (this.closeBombs > 0) {
-        if (this.closeBombs == 1) ctx.p5.fillStyle = "#425d8f";
-        else if (this.closeBombs == 2) ctx.p5.fillStyle = "#036e0c";
-        else if (this.closeBombs == 3) ctx.p5.fillStyle = "#bd0909";
-        else if (this.closeBombs == 4) ctx.p5.fillStyle = "#b709bd";
+        if (this.closeBombs == 1) ctx.fillStyle = "#425d8f";
+        else if (this.closeBombs == 2) ctx.fillStyle = "#036e0c";
+        else if (this.closeBombs == 3) ctx.fillStyle = "#bd0909";
+        else if (this.closeBombs == 4) ctx.fillStyle = "#b709bd";
 
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.font = `${this.w}px Arial`;
-        ctx.p5.fillText(this.closeBombs, this.x + this.w, this.y + this.h);
+        ctx.fillText(this.closeBombs, this.x + this.w, this.y + this.h);
       }
 
       if (this.alpha >= 0.1) this.alpha -= 0.1;
@@ -96,10 +96,10 @@ class Cell {
     } else {
       ctx.save();
       if (this.isBomb && won) {
-        ctx.p5.fillStyle = "#0e8c00";
+        ctx.fillStyle = "#0e8c00";
         ctx.strokeStyle = "#FFFFFF";
         ctx.lineWidth = 8;
-        ctx.p5.fillRect(this.x, this.y, this.w * 2, this.h * 2);
+        ctx.fillRect(this.x, this.y, this.w * 2, this.h * 2);
         ctx.strokeRect(this.x, this.y, this.w * 2, this.h * 2);
         if (this.alpha >= 0.1) this.alpha -= 0.05;
       } else this.alpha = 1;

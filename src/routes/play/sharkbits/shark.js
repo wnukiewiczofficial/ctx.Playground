@@ -21,8 +21,8 @@ function Shark() {
   }; /// Related to shark
 
   this.draw = function () {
-    push();
-    translate(this.x, this.y);
+    p5.push();
+    window.p5.translate(this.x, this.y);
     if (lost) {
       if (this.turn == "left") scale(-1, 1);
       scale(1, -1);
@@ -46,12 +46,12 @@ function Shark() {
     } else this.imgI = 0;
     image(shark_img[this.imgI], -this.w / 2, -this.h / 2, this.w, this.h);
 
-    push();
+    p5.push();
     rotate(-PI / 4);
     image(gun_img, this.gun.x, this.gun.y, this.gun.w, this.gun.h);
-    pop();
+    p5.pop();
 
-    pop();
+    p5.pop();
   };
   this.move = function () {
     this.tilt = atan2(p5.mouseY - this.y, p5.mouseX - this.x);

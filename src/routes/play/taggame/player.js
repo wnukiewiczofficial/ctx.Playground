@@ -30,12 +30,12 @@ class Player {
 
     p5.stroke(this.col);
     p5.textSize(14);
-    textAlign(p5.CENTER, BOTTOM);
+    p5.textAlign(p5.CENTER, BOTTOM);
     textFont(infoFont);
     p5.text(this.nickname, this.x, this.y - this.h / 2);
     if (this.winner) {
       p5.textSize(30);
-      textAlign(p5.CENTER, p5.TOP);
+      p5.textAlign(p5.CENTER, p5.TOP);
       p5.text("WINNER", this.x, this.y + this.h / 2);
     }
   }
@@ -53,7 +53,7 @@ class Player {
         p5.stroke(255);
         p5.strokeWeight(0.5);
         p5.textSize(30);
-        textAlign(p5.CENTER, p5.CENTER);
+        p5.textAlign(p5.CENTER, p5.CENTER);
         textFont(infoFont);
         p5.text(this.tagTime, this.x, this.y);
       } else {

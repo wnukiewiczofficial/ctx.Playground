@@ -56,7 +56,7 @@ function Forest() {
     this.trees[i] = {
       x: i * round(p5.random(320, 360)) - p5.width * 10,
       y: this.y * 0.9 + p5.floor(p5.random(0, this.y * 0.08)),
-      h: p5.random(height * 0.1, p5.height * 0.3),
+      h: p5.random(p5.height * 0.1, p5.height * 0.3),
     };
   }
 
@@ -64,15 +64,15 @@ function Forest() {
     this.y = ground.y * 0.95;
     for (let i = 0; i < this.trees.length; i++) {
       this.trees[i].y = this.y * 0.9 + p5.floor(p5.random(0, this.y * 0.08));
-      this.trees[i].h = p5.random(height * 0.1, p5.height * 0.3);
+      this.trees[i].h = p5.random(p5.height * 0.1, p5.height * 0.3);
     }
   };
 
   this.draw = function () {
-    push();
+    p5.push();
     for (let i = 0; i < this.trees.length; i++) {
       p5.fill(50, 0, 0);
-      rectMode(CORNER);
+      p5.rectMode(p5.CORNER);
       p5.rect(
         this.trees[i].x,
         this.trees[i].y - this.trees[i].h,
@@ -81,7 +81,7 @@ function Forest() {
         10
       );
       p5.fill(0, 120, 0);
-      rectMode(p5.CENTER);
+      p5.rectMode(p5.CENTER);
       p5.rect(
         this.trees[i].x + this.trees[i].h * 0.1,
         this.trees[i].y - this.trees[i].h,
@@ -90,7 +90,7 @@ function Forest() {
         this.trees[i].h * 0.2
       );
     }
-    pop();
+    p5.pop();
   };
 }
 
@@ -101,7 +101,7 @@ function Sky() {
     this.clouds[i] = {
       x: i * round(p5.random(320, 360)) - p5.width * 10,
       y: this.y + p5.floor(p5.random(0, p5.height * 0.1)),
-      d: p5.random(height * 0.1, p5.height * 0.15),
+      d: p5.random(p5.height * 0.1, p5.height * 0.15),
       radius: round(p5.random(30, 60)),
     };
   }
@@ -109,7 +109,7 @@ function Sky() {
   this.resize = function () {
     for (let i = 0; i < this.clouds.length; i++) {
       this.clouds[i].y = this.y + p5.floor(p5.random(0, p5.height * 0.1));
-      this.clouds[i].h = p5.random(height * 0.1, p5.height * 0.15);
+      this.clouds[i].h = p5.random(p5.height * 0.1, p5.height * 0.15);
     }
   };
 

@@ -1,30 +1,30 @@
-var canvas = document.getElementById("canvas"); // Loading canvas from html
-var ctx = canvas.getConp5.text("2d"); // Loading 2d context
+let canvas = document.getElementById("canvas"); // Loading canvas from html
+let ctx = canvas.getConp5.text("2d"); // Loading 2d context
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-var started = true;
-var ending = false;
-var won = false;
+let started = true;
+let ending = false;
+let won = false;
 
 //BOX size (You can play with it however you want)
-var boxW = canvas.height * 0.35;
-var boxH = canvas.height * 0.35;
+let boxW = canvas.height * 0.35;
+let boxH = canvas.height * 0.35;
 
 //Cells 2 Dimensional array
-var cells = new Array(4);
-var values = [];
-var bar = new Array(4);
+let cells = new Array(4);
+let values = [];
+let bar = new Array(4);
 createMap();
 
-var specialDrawn;
-var specialValue;
-var specialUsed = false;
+let specialDrawn;
+let specialValue;
+let specialUsed = false;
 
-var animationON = false;
-var animationIntervals = [];
+let animationON = false;
+let animationIntervals = [];
 
-var pointsValuesCounter = {
+let pointsValuesCounter = {
   minper5: 0,
   per0: 0,
   per5: 0,
@@ -32,31 +32,31 @@ var pointsValuesCounter = {
   x4: 0,
 };
 
-var hintShown = false;
-var hintCell;
-var bonusCell;
+let hintShown = false;
+let hintCell;
+let bonusCell;
 
-var score = 0;
-var round = 1;
+let score = 0;
+let round = 1;
 
 // IMAGES
-var backgroundImg = new Image();
+let backgroundImg = new Image();
 backgroundImg.src = "./images/background.png";
-var fieldImg = new Image();
+let fieldImg = new Image();
 fieldImg.src = "./images/field.png";
-var cellUnmatchedImg = new Image();
+let cellUnmatchedImg = new Image();
 cellUnmatchedImg.src = "./images/cellUnmatched.png";
-var cellMatchedImg = new Image();
+let cellMatchedImg = new Image();
 cellMatchedImg.src = "./images/cellMatched.png";
-var barImg = new Image();
+let barImg = new Image();
 barImg.src = "./images/bar.png";
 
 // Here are Powers Images, you can swap them (remeber about good file name and file extension)
-var powerWImg = new Image();
+let powerWImg = new Image();
 powerWImg.src = "./images/temp.jpg";
-var powerSWImg = new Image();
+let powerSWImg = new Image();
 powerSWImg.src = "./images/temp.jpg";
-var powerGImg = new Image();
+let powerGImg = new Image();
 powerGImg.src = "./images/temp.jpg";
 
 function gameLoop() {

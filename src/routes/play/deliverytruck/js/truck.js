@@ -68,11 +68,11 @@ class Truck {
 
   draw() {
     ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
-    ctx.p5.fillStyle = "#000000";
+    ctx.fillStyle = "#000000";
     ctx.textAlign = "left";
     ctx.font = this.w * 0.3 + "px VT323";
     ctx.textBaseline = "middle";
-    ctx.p5.fillText(this.score, this.x + this.w / 4, this.y + this.h / 2);
+    ctx.fillText(this.score, this.x + this.w / 4, this.y + this.h / 2);
   }
 }
 

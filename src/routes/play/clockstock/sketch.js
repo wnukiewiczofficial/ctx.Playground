@@ -1,10 +1,10 @@
-var p5.randomSecond;
+let p5.randomSecond;
 
-var contentShown = false;
+let contentShown = false;
 
-var clock;
+let clock;
 
-var bell;
+let bell;
 
 function preload() {
   bell = p5.loadSound("sounds/bell.wav");

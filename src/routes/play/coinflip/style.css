@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Slackey&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  font-family: 'Slackey';
+  font-family: "Slackey";
   box-sizing: border-box;
   user-select: none;
 }
@@ -12,13 +13,13 @@ canvas {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: window.p5.translate(-50%, -50%);
   margin: auto;
   z-index: -100;
 }
 
-.logo{
-  font-family: 'Patua One';
+.logo {
+  font-family: "Patua One";
   left: 5%;
   position: absolute;
   width: 22vw;
@@ -28,19 +29,19 @@ canvas {
   align-items: center;
 }
 
-#title{
+#title {
   font-size: 5vw;
   margin: 0;
 }
 
-#phrase{
+#phrase {
   margin: 0;
   font-size: 1.1vw;
 }
 
-.prediction{
+.prediction {
   font-size: 1.5vw;
-  font-family: 'Patua One';
+  font-family: "Patua One";
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -55,7 +56,7 @@ canvas {
   transform: translateY(-50%);
 }
 
-.prediction .choices{
+.prediction .choices {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -63,48 +64,48 @@ canvas {
   height: 10vh;
 }
 
-.choices img{
+.choices img {
   width: 6vw;
   height: 6vw;
   transition: transform 0.5s;
 }
 
-.choices img:hover{
+.choices img:hover {
   cursor: pointer;
   transform: translateY(-20%) scale(1.2);
 }
 
-#button_div{
+#button_div {
   width: 100%;
   height: 40%;
   margin: 10%;
 }
 
-#flip{
+#flip {
   margin: auto;
   width: 25%;
   height: 6vh;
   font-size: 1vw;
   background: red;
-  color: #FFF;
+  color: #fff;
   border: none;
   border-radius: 10%;
   transition: background 0.5s;
   display: none;
-  font-family: 'Patua One';
+  font-family: "Patua One";
 }
 
-#flip:hover{
+#flip:hover {
   cursor: pointer;
   background: darkred;
 }
 
-#flip:active{
+#flip:active {
   cursor: pointer;
   background: black;
 }
 
-.stats{
+.stats {
   position: absolute;
   right: 0%;
   width: 25%;
@@ -115,7 +116,7 @@ canvas {
   left: 70%;
 }
 
-.stat{
+.stat {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -123,17 +124,17 @@ canvas {
   justify-content: space-between;
 }
 
-.stat h1{
+.stat h1 {
   font-size: 2.5vw;
   margin: 0;
 }
 
-.stat h2{
+.stat h2 {
   font-size: 4vw;
   margin: 0;
 }
 
-.social{
+.social {
   width: 30%;
   position: absolute;
   right: 10%;
@@ -142,14 +143,14 @@ canvas {
   justify-content: space-around;
 }
 
-.social a{
+.social a {
   transition: transform 1s ease-out;
   position: relative;
 }
 
-.social a::after{
+.social a::after {
   position: absolute;
-  content: '';
+  content: "";
   top: -2vw;
   left: 50%;
   z-index: -100;
@@ -159,20 +160,20 @@ canvas {
   transition: transform 1s ease-out;
 }
 
-.social a:hover{
+.social a:hover {
   transform: translateY(55%);
 }
 
-.social a:hover::after{
+.social a:hover::after {
   transform: translateY(10%);
 }
 
-.social img{
+.social img {
   width: 3vw;
   height: 3vw;
 }
 
-footer{
+footer {
   position: absolute;
   bottom: 0;
   left: 5%;
@@ -182,25 +183,25 @@ footer{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Patua One';
+  font-family: "Patua One";
 }
 
-.pages{
+.pages {
   width: 40%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.pages a{
+.pages a {
   text-decoration: none;
   color: black;
   font-size: 1.5vw;
   position: relative;
 }
 
-.pages a::after{
-  content: '';
+.pages a::after {
+  content: "";
   background: black;
   width: 0;
   transition: 0.5s width;
@@ -210,22 +211,22 @@ footer{
   bottom: 0;
 }
 
-.pages a:hover::after{
+.pages a:hover::after {
   width: 100%;
 }
 
-.page_title{
-  font-family: 'Pagua One';
+.page_title {
+  font-family: "Pagua One";
   position: absolute;
   left: 50%;
   top: 5%;
   font-size: 3vw;
   margin: 0;
-  transform: translate(-50%);
+  transform: window.p5.translate(-50%);
 }
 
-.page_content{
-  font-family: 'Pague One';
+.page_content {
+  font-family: "Pague One";
   font-size: 2vw;
   width: 80%;
   position: absolute;
@@ -234,7 +235,7 @@ footer{
   text-align: center;
 }
 
-#copyright{
+#copyright {
   margin: 0;
   font-size: 2vw;
 }
@@ -245,53 +246,53 @@ footer{
   }
 } */
 
-@media (max-width: 1000px) and (orientation: portrait){
-    canvas{
+@media (max-width: 1000px) and (orientation: portrait) {
+  canvas {
     top: 30%;
     left: 50%;
   }
-  .logo{
+  .logo {
     top: 5%;
     width: 40%;
     left: 30%;
   }
 
-  #title{
+  #title {
     font-size: 5vh;
     margin: 0;
   }
 
-  #phrase{
+  #phrase {
     margin: 0;
     font-size: 1.1vh;
   }
 
-  .prediction{
+  .prediction {
     font-size: 1.6vh;
     width: 26vh;
     height: 40vw;
     top: 60%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: window.p5.translate(-50%, -50%);
   }
 
-  .prediction .choices{
+  .prediction .choices {
     width: 90%;
     height: 10vh;
   }
 
-  .choices img{
+  .choices img {
     width: 8vh;
     height: 8vh;
   }
 
-  #flip{
+  #flip {
     width: 40%;
     height: 8vw;
     font-size: 2vh;
   }
 
-  .stats{
+  .stats {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     flex-direction: row;
@@ -300,20 +301,20 @@ footer{
     left: 0;
   }
 
-  .stat{
+  .stat {
     width: 100%;
     justify-content: space-around;
   }
 
-  .stat h1{
+  .stat h1 {
     font-size: 4vw;
   }
 
-  .stat h2{
+  .stat h2 {
     font-size: 5vw;
   }
 
-  .social{
+  .social {
     width: 8%;
     height: 30vh;
     top: 50%;
@@ -323,20 +324,20 @@ footer{
     flex-direction: column;
   }
 
-  .social a::after{
+  .social a::after {
     content: none;
   }
 
-  .social a:hover{
+  .social a:hover {
     transform: translateX(-55%);
   }
 
-  .social img{
+  .social img {
     width: 4vh;
     height: 4vh;
   }
 
-  footer{
+  footer {
     position: absolute;
     bottom: 0;
     left: 5%;
@@ -346,39 +347,39 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Patua One';
+    font-family: "Patua One";
   }
 
-  .pages{
+  .pages {
     width: 60%;
   }
 
-  .pages a{
+  .pages a {
     font-size: 1.5vh;
   }
 
-  .pages a:hover::after{
+  .pages a:hover::after {
     width: 0;
   }
 
-  .page_title{
+  .page_title {
     left: 50%;
     top: 10%;
     font-size: 3vh;
     width: 100%;
     text-align: center;
     margin: 0;
-    transform: translate(-50%);
+    transform: window.p5.translate(-50%);
   }
 
-  .page_content{
+  .page_content {
     font-size: 1.8vh;
     width: 80%;
     top: 30%;
     left: 10%;
   }
 
-  #copyright{
+  #copyright {
     font-size: 2vh;
   }
 }

@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import React from "react";
 //Default Route
 import Entrance from "./routes/entrance";
 // Playground imports
@@ -10,6 +11,9 @@ import TemplatePlayground from "./routes/playground/templateplayground";
 import Play from "./routes/play";
 import ArtByLine from "./routes/play/artbyline/sketch";
 import ChaseTheBall from "./routes/play/chasetheball/sketch";
+import TicTacToe from "./routes/play/tictactoe/sketch";
+import Snake from "./routes/play/snake/sketch";
+import ThePong from "./routes/play/thepong/sketch";
 // import MusicVisualizer from "./routes/play/musicvisualizer/sketch";
 // import Snake from "./routes/play/snake/sketch";
 /// HERE TO COMMENT OUT
@@ -22,6 +26,9 @@ export default function Routing() {
   const gameComponents = {
     artbyline: ArtByLine,
     chasetheball: ChaseTheBall,
+    tictactoe: TicTacToe,
+    snake: Snake,
+    thepong: ThePong,
   };
 
   return (

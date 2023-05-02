@@ -10,13 +10,13 @@ class Bullet {
   }
 
   draw() {
-    push();
+    p5.push();
     p5.fill(0);
     p5.noStroke();
-    translate(this.x, this.y);
+    window.p5.translate(this.x, this.y);
     rotate(this.rot);
-    ellipse(0, 0, this.w, this.h);
-    pop();
+    p5.ellipse(0, 0, this.w, this.h);
+    p5.pop();
   }
 
   move() {

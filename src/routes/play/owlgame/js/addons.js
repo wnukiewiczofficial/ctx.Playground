@@ -45,16 +45,16 @@ function checkForClick(e, obj) {
 }
 
 function wrapText(text, x, y, maxWidth, lineHeight) {
-  var splitText = text.split(" ");
-  var line = "";
+  let splitText = text.split(" ");
+  let line = "";
 
-  for (var n = 0; n < splitText.length; n++) {
-    var testLine = line + splitText[n] + " ";
-    var metrics = ctx.measureText(testLine);
-    var testWidth = metrics.width;
+  for (let n = 0; n < splitText.length; n++) {
+    let testLine = line + splitText[n] + " ";
+    let metrics = ctx.measureText(testLine);
+    let testWidth = metrics.width;
     if (testWidth > maxWidth && n > 0) {
       ctx.strokeText(line, x, y);
-      ctx.p5.fillText(line, x, y);
+      ctx.fillText(line, x, y);
       line = splitText[n] + " ";
       y += lineHeight;
     } else {
@@ -62,7 +62,7 @@ function wrapText(text, x, y, maxWidth, lineHeight) {
     }
   }
   ctx.strokeText(line, x, y);
-  ctx.p5.fillText(line, x, y);
+  ctx.fillText(line, x, y);
 }
 
 function LimitUses() {
@@ -155,7 +155,7 @@ function pickQuote() {
 //
 //   connection.onreadystatechange = function() {
 //   	if (this.readyState == 4 && this.status == 200) {
-//   		var response = JSON.parse(this.responseText);
+//   		let response = JSON.parse(this.responseText);
 //   	}
 //   };
 // }
@@ -165,7 +165,7 @@ function pickQuote() {
 function HandleFooter() {
   //Copyright mood.tips
   ctx.save();
-  ctx.p5.fillStyle = "white";
+  ctx.fillStyle = "white";
   ctx.strokeStyle = "black";
   ctx.lineWidth = canvas.width * 0.002;
   ctx.font = `${
@@ -178,7 +178,7 @@ function HandleFooter() {
     canvas.width / 2,
     mobile ? canvas.height * 0.87 : canvas.height * 0.97
   );
-  ctx.p5.fillText(
+  ctx.fillText(
     "©moods.tips",
     canvas.width / 2,
     mobile ? canvas.height * 0.87 : canvas.height * 0.97

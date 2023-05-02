@@ -11,11 +11,11 @@ class Trident {
   }
 
   draw() {
-    push();
-    translate(this.x, this.y);
+    p5.push();
+    window.p5.translate(this.x, this.y);
     rotate(this.rot);
     image(this.img, 0, 0, this.w, this.h);
-    pop();
+    p5.pop();
   }
 
   move() {

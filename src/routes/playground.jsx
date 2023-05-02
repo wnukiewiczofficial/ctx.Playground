@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/navbar";
+import React from "react";
 
 export default function Playground({ gameDatabase }) {
   return (

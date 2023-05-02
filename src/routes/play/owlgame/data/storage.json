@@ -23,7 +23,7 @@ AT All time
 */
 
 
-var words = [
+let words = [
   {quote: "Talking to friends energizes your spirit.", tag: "AT"},
   {quote: "It's a good idea to call your loved one!", tag: "AT"},
   {quote: "Laziness and tiredness hinder productivity.", tag: "AT"},

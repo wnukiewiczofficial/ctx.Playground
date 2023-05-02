@@ -1,41 +1,41 @@
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getConp5.text("2d");
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getConp5.text("2d");
 let dpi = window.devicePixelRatio;
 
 canvas.width = window.innerWidth * dpi;
 canvas.height = window.innerHeight * dpi;
 
-var mobile = canvas.width > canvas.height ? false : true;
+let mobile = canvas.width > canvas.height ? false : true;
 
 // Background music: https://www.bensound.com
-var background_music = new Sound("sounds/background_music.mp3", 0.3);
+let background_music = new Sound("sounds/background_music.mp3", 0.3);
 // document.getElementById("bgMusic").volume = 0.3;
 
-var TipsUsed = 0;
+let TipsUsed = 0;
 
-var firstTipDate;
+let firstTipDate;
 
 // Owl voices sounds from sfxr.me
-var voices = [
+let voices = [
   new Sound("sounds/voice_1.wav", 0.2),
   new Sound("sounds/voice_2.wav", 0.2),
 ];
 
 // Owl Images
-var background_img = new Image();
+let background_img = new Image();
 background_img.src = "images/background.png";
 
-var owl_sprite = [new Image(), new Image()];
+let owl_sprite = [new Image(), new Image()];
 owl_sprite[0].src = "images/owl_idle.png";
 owl_sprite[1].src = "images/owl_talk.png";
 
-var background = {
+let background = {
   r: 99,
   g: 207,
   b: 93,
   draw: function () {
-    ctx.p5.fillStyle = `rgb(${this.r}, ${this.g}, ${this.b})`;
-    ctx.p5.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = `rgb(${this.r}, ${this.g}, ${this.b})`;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     if (!mobile)
       ctx.drawImage(background_img, 0, 0, canvas.width, canvas.height);
@@ -47,7 +47,7 @@ var background = {
   },
 };
 
-var owl = {
+let owl = {
   w: mobile ? canvas.height * 0.18 : canvas.width * 0.18,
   h: mobile ? canvas.height * 0.18 : canvas.width * 0.18,
   x: mobile
@@ -86,7 +86,7 @@ var owl = {
     let fontSize = mobile ? canvas.height * 0.03 : canvas.width * 0.02;
     ctx.strokeStyle = "black";
     ctx.lineWidth = owl.w * 0.01;
-    ctx.p5.fillStyle = "orange";
+    ctx.fillStyle = "orange";
     ctx.font = `${fontSize}px Nunito`;
     ctx.textBaseline = "middle";
     ctx.textAlign = "center";
@@ -113,7 +113,7 @@ function Word(word, color = "white") {
     ctx.save();
     ctx.strokeStyle = "black";
     ctx.lineWidth = owl.w * 0.01;
-    ctx.p5.fillStyle = this.color;
+    ctx.fillStyle = this.color;
     let fontSize = mobile ? canvas.height * 0.03 : canvas.width * 0.02;
     ctx.font = `${fontSize}px Nunito`;
     ctx.textBaseline = "middle";
@@ -129,7 +129,7 @@ function Word(word, color = "white") {
   };
 }
 
-var words_said = [];
+let words_said = [];
 
 // Rendering, drawing
 function Update() {

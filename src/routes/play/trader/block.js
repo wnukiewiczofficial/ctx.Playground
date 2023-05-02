@@ -38,15 +38,15 @@ class Block {
       this.green = color.g;
       this.blue = color.b;
     }
-    ctx.p5.fillStyle = `rgb(${this.red}, ${this.green}, ${this.blue})`;
-    ctx.p5.fillRect(this.x, this.y, this.w, this.h);
+    ctx.fillStyle = `rgb(${this.red}, ${this.green}, ${this.blue})`;
+    ctx.fillRect(this.x, this.y, this.w, this.h);
     ctx.strokeRect(this.x, this.y, this.w, this.h);
 
-    ctx.p5.fillStyle = "#FFFFFF";
+    ctx.fillStyle = "#FFFFFF";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.font = `${canvas.width / 28}px porkys`;
-    ctx.p5.fillText(
+    ctx.fillText(
       this.value < 0.5 ? "BUY" : "SELL",
       this.x + this.w / 2,
       this.y + this.h / 2

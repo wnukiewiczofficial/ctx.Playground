@@ -1,11 +1,11 @@
-var instructions =
+let instructions =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo diam id efficitur finibus. Duis in placerat felis, sed imperdiet tortor. Quisque in finibus ligula, et aliquam ligula. Nunc sit amet lorem eget ante sagittis malesuada eget eget dolor. Quisque et ullamcorper diam. Duis rhoncus nibh vitae ex eleifend, quis facilisis libero finibus. Pellentesque at ornare ex. Vivamus id nunc dolor. Aenean augue lacus, malesuada varius lacus et, auctor accumsan quam. Fusce sit amet cursus augue, in commodo massa. Cras molestie nulla diam, id vehicula augue lacinia vel. Nulla eros augue, posuere vel vulputate id, rutrum in risus. Quisque risus augue, aliquet blandit dapibus id, fermentum ac elit. Nullam ac dapibus sem. Fusce tempor mi non ex tristique, quis mollis tellus consequat.";
 
 function drawBackground() {
   ctx.save();
   ctx.drawImage(bgImage, 0, 0, canvas.width, canvas.height);
-  ctx.p5.fillStyle = "rgba(255, 255, 255, 0.2)";
-  ctx.p5.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "rgba(255, 255, 255, 0.2)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.restore();
 }
 
@@ -41,8 +41,8 @@ function drawComputers() {
 //WINDOW
 function drawScrollWindow() {
   ctx.save();
-  ctx.p5.fillStyle = "#FFFFFF";
-  ctx.p5.fillRect(
+  ctx.fillStyle = "#FFFFFF";
+  ctx.fillRect(
     (canvas.width / 6) * 2 + 10,
     0,
     (canvas.width / 6) * 2 - 20,
@@ -56,14 +56,14 @@ function drawScrollWindow() {
   ctx.lineTo((canvas.width / 6) * 2 + 10, canvas.height);
   ctx.moveTo(canvas.width - (canvas.width / 6) * 2 - 10, 0);
   ctx.lineTo(canvas.width - (canvas.width / 6) * 2 - 10, canvas.height);
-  ctx.p5.stroke();
+  ctx.stroke();
   ctx.restore();
 }
 
 //SCORE
 function drawScore() {
   ctx.save();
-  ctx.p5.fillStyle = "#b0760b";
+  ctx.fillStyle = "#b0760b";
   ctx.textAlign = "center";
   ctx.textBaseline = "bot";
 
@@ -71,7 +71,7 @@ function drawScore() {
   if (scoreFontSize > canvas.width / 32 && !selector.correct)
     scoreFontSize -= 2;
   ctx.font = `${scoreFontSize}px porkys`;
-  ctx.p5.fillText(
+  ctx.fillText(
     "Score: " + man.score,
     canvas.width - canvas.width / 6,
     canvas.height / 8
@@ -85,14 +85,14 @@ function drawScore() {
 //   ctx.save();
 //   let w = (canvas.width-canvas.width/6*2) - (canvas.width/6*2);
 //   let h = canvas.height/6;
-//   ctx.p5.fillStyle = '#32a0a8';
-//   ctx.p5.fillRect(canvas.width/2 - w/2, canvas.height*0.8,w, h);
+//   ctx.fillStyle = '#32a0a8';
+//   ctx.fillRect(canvas.width/2 - w/2, canvas.height*0.8,w, h);
 //
-//   ctx.p5.fillStyle = '#bd2626';
+//   ctx.fillStyle = '#bd2626';
 //   ctx.textAlign = 'center';
 //   ctx.textBaseline = 'middle';
 //   ctx.font = '80px porkys';
-//   ctx.p5.fillText('REPLAY', canvas.width/2, canvas.height*0.8+h/2);
+//   ctx.fillText('REPLAY', canvas.width/2, canvas.height*0.8+h/2);
 //   ctx.restore();
 // }
 
@@ -102,28 +102,28 @@ function drawGameOver() {
   let w = canvas.width - (canvas.width / 6) * 2 - (canvas.width / 6) * 2;
   let h = canvas.height / 6;
 
-  ctx.p5.fillStyle = "#bd2626";
+  ctx.fillStyle = "#bd2626";
   ctx.strokeStyle = "#FFFFFF";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
   ctx.font = `${canvas.width / 10}px porkys`;
   ctx.strokeText("GAME OVER", canvas.width / 2, canvas.height / 2);
-  ctx.p5.fillText("GAME OVER", canvas.width / 2, canvas.height / 2);
+  ctx.fillText("GAME OVER", canvas.width / 2, canvas.height / 2);
   ctx.restore();
 }
 
 // DIALOG
 function drawDialog() {
   ctx.save();
-  ctx.p5.fillStyle = "#bd2626";
-  ctx.p5.fillRect(
+  ctx.fillStyle = "#bd2626";
+  ctx.fillRect(
     canvas.width / 4,
     canvas.height / 2 - canvas.height * 0.2,
     canvas.width / 2,
     canvas.height * 0.65
   );
 
-  ctx.p5.fillStyle = "#FFFFFF";
+  ctx.fillStyle = "#FFFFFF";
   ctx.textAlign = "left";
   ctx.textBaseline = "middle";
   ctx.font = `${canvas.width / 50}px porkys`;
@@ -138,20 +138,20 @@ function drawDialog() {
 }
 
 function wrapText(text, x, y, maxWidth, lineHeight) {
-  var words = text.split(" ");
-  var line = "";
+  let words = text.split(" ");
+  let line = "";
 
-  for (var n = 0; n < words.length; n++) {
-    var testLine = line + words[n] + " ";
-    var metrics = ctx.measureText(testLine);
-    var testWidth = metrics.width;
+  for (let n = 0; n < words.length; n++) {
+    let testLine = line + words[n] + " ";
+    let metrics = ctx.measureText(testLine);
+    let testWidth = metrics.width;
     if (testWidth > maxWidth && n > 0) {
-      ctx.p5.fillText(line, x, y);
+      ctx.fillText(line, x, y);
       line = words[n] + " ";
       y += lineHeight;
     } else {
       line = testLine;
     }
   }
-  ctx.p5.fillText(line, x, y);
+  ctx.fillText(line, x, y);
 }

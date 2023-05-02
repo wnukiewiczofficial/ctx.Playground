@@ -4,39 +4,39 @@ The Game Project 6
 
 */
 
-var gameChar_x;
-var gameChar_vel;
-var gravity;
-var p5.floorPos_y;
-var scrollPos;
-var gameChar_world_x;
+let gameChar_x;
+let gameChar_vel;
+let gravity;
+let p5.floorPos_y;
+let scrollPos;
+let gameChar_world_x;
 
-var isLeft;
-var isRight;
-var isFalling;
-var isPlummeting;
+let isLeft;
+let isRight;
+let isFalling;
+let isPlummeting;
 
-var trees_x;
-var clouds;
-var mountains;
-var canyons;
-var collectables;
+let trees_x;
+let clouds;
+let mountains;
+let canyons;
+let collectables;
 
-var game_score;
-var flagpole;
-var lives;
+let game_score;
+let flagpole;
+let lives;
 
-var lost;
-var won;
+let lost;
+let won;
 
-var platforms;
+let platforms;
 
-var enemies;
+let enemies;
 
 // Sounds
-var pickupSound;
-var fallSound;
-var jumpSound;
+let pickupSound;
+let fallSound;
+let jumpSound;
 
 // Loading all sound files in the preloader
 function preload() {
@@ -64,8 +64,8 @@ function draw() {
   p5.fill(0, 155, 0);
   p5.rect(0, p5.floorPos_y,p5.width, p5.height / 4); // draw some green ground
 
-  push();
-  translate(scrollPos, 0);
+  p5.push();
+  window.p5.translate(scrollPos, 0);
 
   // Draw clouds.
   drawCloud();
@@ -79,7 +79,7 @@ function draw() {
 
   // Draw canyons.
 
-  for (var i = 0; i < canyons.length; i++) {
+  for (let i = 0; i < canyons.length; i++) {
     drawCanyon(canyons[i]);
     checkCanyon(canyons[i]);
   }
@@ -92,7 +92,7 @@ function draw() {
 
   // Draw collectable items.
 
-  for (var i = 0; i < collectables.length; i++) {
+  for (let i = 0; i < collectables.length; i++) {
     if (!collectables[i].isFound) {
       drawCollectable(collectables[i]);
       checkCollectable(collectables[i]);
@@ -112,7 +112,7 @@ function draw() {
 
   checkPlayerDie();
 
-  pop();
+  p5.pop();
 
   // Draw game character.
 
@@ -123,17 +123,17 @@ function draw() {
     p5.fill(200, 0, 0);
     p5.noStroke();
     p5.textSize(40);
-    textAlign(p5.CENTER);
+    p5.textAlign(p5.CENTER);
     p5.text("Game over. Press space to continue.",p5.width / 2, p5.height / 2);
   } else if (won) {
     p5.fill(0, 200, 0);
     p5.noStroke();
     p5.textSize(40);
-    textAlign(p5.CENTER);
+    p5.textAlign(p5.CENTER);
     p5.text("Level complete. Press space to continue",p5.width / 2, p5.height / 2);
   }
 
-  textAlign(p5.LEFT);
+  p5.textAlign(p5.LEFT);
   p5.fill(255);
   p5.noStroke();
   p5.textSize(20);
@@ -144,7 +144,7 @@ function draw() {
   p5.textSize(20);
   p5.text("Lives remaining: ", 20, 60);
   p5.fill(200, 0, 0);
-  for (let i = 0; i < lives; i++) ellipse(180 + i * 20, 55, 15); // Draw lives tokens
+  for (let i = 0; i < lives; i++) p5.ellipse(180 + i * 20, 55, 15); // Draw lives tokens
 
   // Logic to make the game character move or the background scroll.
   if (isLeft) {
@@ -242,7 +242,7 @@ function drawGameChar() {
   if (isLeft && isFalling) {
     // add your jumping-left code
     p5.fill(200, 150, 150);
-    ellipse(gameChar_x, gameChar_y - 59, 35);
+    p5.ellipse(gameChar_x, gameChar_y - 59, 35);
 
     p5.fill(255, 0, 0);
     p5.rect(gameChar_x - 5, gameChar_y - 43, 10, 25);
@@ -251,24 +251,24 @@ function drawGameChar() {
     p5.rect(gameChar_x + 5, gameChar_y - 20, -17, 10);
 
     p5.fill(0);
-    beginShape();
-    vertex(gameChar_x - 5, gameChar_y - 34);
-    vertex(gameChar_x - 17, gameChar_y - 27);
-    vertex(gameChar_x - 17, gameChar_y - 22);
-    vertex(gameChar_x - 5, gameChar_y - 29);
-    endShape(CLOSE);
+    window.p5.beginShape();
+    window.p5.vertex()gameChar_x - 5, gameChar_y - 34);
+    window.p5.vertex()gameChar_x - 17, gameChar_y - 27);
+    window.p5.vertex()gameChar_x - 17, gameChar_y - 22);
+    window.p5.vertex()gameChar_x - 5, gameChar_y - 29);
+    window.p5.endShape(CLOSE);
 
     p5.fill(0);
-    beginShape();
-    vertex(gameChar_x - 5, gameChar_y - 34);
-    vertex(gameChar_x - 15, gameChar_y - 37);
-    vertex(gameChar_x - 15, gameChar_y - 32);
-    vertex(gameChar_x - 5, gameChar_y - 29);
-    endShape(CLOSE);
+    window.p5.beginShape();
+    window.p5.vertex()gameChar_x - 5, gameChar_y - 34);
+    window.p5.vertex()gameChar_x - 15, gameChar_y - 37);
+    window.p5.vertex()gameChar_x - 15, gameChar_y - 32);
+    window.p5.vertex()gameChar_x - 5, gameChar_y - 29);
+    window.p5.endShape(CLOSE);
   } else if (isRight && isFalling) {
     // add your jumping-right code
     p5.fill(200, 150, 150);
-    ellipse(gameChar_x, gameChar_y - 59, 35);
+    p5.ellipse(gameChar_x, gameChar_y - 59, 35);
 
     p5.fill(255, 0, 0);
     p5.rect(gameChar_x - 5, gameChar_y - 43, 10, 25);
@@ -277,24 +277,24 @@ function drawGameChar() {
     p5.rect(gameChar_x - 5, gameChar_y - 20, 17, 10);
 
     p5.fill(0);
-    beginShape();
-    vertex(gameChar_x + 5, gameChar_y - 34);
-    vertex(gameChar_x + 17, gameChar_y - 27);
-    vertex(gameChar_x + 17, gameChar_y - 22);
-    vertex(gameChar_x + 5, gameChar_y - 29);
-    endShape(CLOSE);
+    window.p5.beginShape();
+    window.p5.vertex()gameChar_x + 5, gameChar_y - 34);
+    window.p5.vertex()gameChar_x + 17, gameChar_y - 27);
+    window.p5.vertex()gameChar_x + 17, gameChar_y - 22);
+    window.p5.vertex()gameChar_x + 5, gameChar_y - 29);
+    window.p5.endShape(CLOSE);
 
     p5.fill(0);
-    beginShape();
-    vertex(gameChar_x + 5, gameChar_y - 34);
-    vertex(gameChar_x + 15, gameChar_y - 37);
-    vertex(gameChar_x + 15, gameChar_y - 32);
-    vertex(gameChar_x + 5, gameChar_y - 29);
-    endShape(CLOSE);
+    window.p5.beginShape();
+    window.p5.vertex()gameChar_x + 5, gameChar_y - 34);
+    window.p5.vertex()gameChar_x + 15, gameChar_y - 37);
+    window.p5.vertex()gameChar_x + 15, gameChar_y - 32);
+    window.p5.vertex()gameChar_x + 5, gameChar_y - 29);
+    window.p5.endShape(CLOSE);
   } else if (isLeft) {
     // add your walking left code
     p5.fill(200, 150, 150);
-    ellipse(gameChar_x, gameChar_y - 50, 35);
+    p5.ellipse(gameChar_x, gameChar_y - 50, 35);
 
     p5.fill(255, 0, 0);
     p5.rect(gameChar_x - 5, gameChar_y - 35, 10, 30);
@@ -303,16 +303,16 @@ function drawGameChar() {
     p5.rect(gameChar_x - 12, gameChar_y - 5, 17, 10);
 
     p5.fill(0);
-    beginShape();
-    vertex(gameChar_x - 5, gameChar_y - 25);
-    vertex(gameChar_x - 15, gameChar_y - 20);
-    vertex(gameChar_x - 15, gameChar_y - 15);
-    vertex(gameChar_x - 5, gameChar_y - 20);
-    endShape(CLOSE);
+    window.p5.beginShape();
+    window.p5.vertex()gameChar_x - 5, gameChar_y - 25);
+    window.p5.vertex()gameChar_x - 15, gameChar_y - 20);
+    window.p5.vertex()gameChar_x - 15, gameChar_y - 15);
+    window.p5.vertex()gameChar_x - 5, gameChar_y - 20);
+    window.p5.endShape(CLOSE);
   } else if (isRight) {
     // add your walking right code
     p5.fill(200, 150, 150);
-    ellipse(gameChar_x, gameChar_y - 50, 35);
+    p5.ellipse(gameChar_x, gameChar_y - 50, 35);
 
     p5.fill(255, 0, 0);
     p5.rect(gameChar_x - 5, gameChar_y - 35, 10, 30);
@@ -321,16 +321,16 @@ function drawGameChar() {
     p5.rect(gameChar_x - 5, gameChar_y - 5, 17, 10);
 
     p5.fill(0);
-    beginShape();
-    vertex(gameChar_x + 5, gameChar_y - 24);
-    vertex(gameChar_x + 17, gameChar_y - 17);
-    vertex(gameChar_x + 17, gameChar_y - 12);
-    vertex(gameChar_x + 5, gameChar_y - 19);
-    endShape(CLOSE);
+    window.p5.beginShape();
+    window.p5.vertex()gameChar_x + 5, gameChar_y - 24);
+    window.p5.vertex()gameChar_x + 17, gameChar_y - 17);
+    window.p5.vertex()gameChar_x + 17, gameChar_y - 12);
+    window.p5.vertex()gameChar_x + 5, gameChar_y - 19);
+    window.p5.endShape(CLOSE);
   } else if (isFalling || isPlummeting) {
     // add your jumping facing forwards code
     p5.fill(200, 150, 150);
-    ellipse(gameChar_x, gameChar_y - 58, 35);
+    p5.ellipse(gameChar_x, gameChar_y - 58, 35);
 
     p5.fill(255, 0, 0);
     p5.rect(gameChar_x - 13, gameChar_y - 42, 26, 30);
@@ -345,7 +345,7 @@ function drawGameChar() {
   } else {
     // add your standing front facing code
     p5.fill(200, 150, 150);
-    ellipse(gameChar_x, gameChar_y - 50, 35);
+    p5.ellipse(gameChar_x, gameChar_y - 50, 35);
 
     p5.fill(255, 0, 0);
     p5.rect(gameChar_x - 13, gameChar_y - 35, 26, 30);
@@ -365,9 +365,9 @@ function drawGameChar() {
 function drawCloud() {
   for (let i = 0; i < clouds.length; i++) {
     p5.fill(255);
-    ellipse(clouds[i].pos_x, clouds[i].pos_y, 55, 55);
-    ellipse(clouds[i].pos_x + 25, clouds[i].pos_y, 35, 35);
-    ellipse(clouds[i].pos_x + 45, clouds[i].pos_y, 25, 25);
+    p5.ellipse(clouds[i].pos_x, clouds[i].pos_y, 55, 55);
+    p5.ellipse(clouds[i].pos_x + 25, clouds[i].pos_y, 35, 35);
+    p5.ellipse(clouds[i].pos_x + 45, clouds[i].pos_y, 25, 25);
   }
 }
 
@@ -435,28 +435,28 @@ function drawTrees() {
 
 function drawCanyon(t_canyon) {
   p5.fill(139, 69, 19);
-  beginShape();
-  vertex(t_canyon.pos_x + 237 + t_canyon.width, t_canyon.pos_y);
-  vertex(t_canyon.pos_x + 250 + t_canyon.width, 432);
-  vertex(t_canyon.pos_x + 313 + t_canyon.width, 577);
-  vertex(t_canyon.pos_x + 255 + t_canyon.width, 577);
-  endShape();
+  window.p5.beginShape();
+  window.p5.vertex()t_canyon.pos_x + 237 + t_canyon.width, t_canyon.pos_y);
+  window.p5.vertex()t_canyon.pos_x + 250 + t_canyon.width, 432);
+  window.p5.vertex()t_canyon.pos_x + 313 + t_canyon.width, 577);
+  window.p5.vertex()t_canyon.pos_x + 255 + t_canyon.width, 577);
+  window.p5.endShape();
 
   p5.fill(139, 69, 19);
-  beginShape();
-  vertex(t_canyon.pos_x + 201, 454);
-  vertex(t_canyon.pos_x + 180, 432);
-  vertex(t_canyon.pos_x + 133, 577);
-  vertex(t_canyon.pos_x + 180, 577);
-  endShape();
+  window.p5.beginShape();
+  window.p5.vertex()t_canyon.pos_x + 201, 454);
+  window.p5.vertex()t_canyon.pos_x + 180, 432);
+  window.p5.vertex()t_canyon.pos_x + 133, 577);
+  window.p5.vertex()t_canyon.pos_x + 180, 577);
+  window.p5.endShape();
 
   p5.fill(100, 155, 255);
-  beginShape();
-  vertex(t_canyon.pos_x + 180, 432);
-  vertex(t_canyon.pos_x + 250 + t_canyon.width, 432);
-  vertex(t_canyon.pos_x + 237 + t_canyon.width, 454);
-  vertex(t_canyon.pos_x + 201, 454);
-  endShape();
+  window.p5.beginShape();
+  window.p5.vertex()t_canyon.pos_x + 180, 432);
+  window.p5.vertex()t_canyon.pos_x + 250 + t_canyon.width, 432);
+  window.p5.vertex()t_canyon.pos_x + 237 + t_canyon.width, 454);
+  window.p5.vertex()t_canyon.pos_x + 201, 454);
+  window.p5.endShape();
 }
 
 // Function to check character is over a canyon.
@@ -490,7 +490,7 @@ function createPlatform(x, y) {
     h: 16,
     colliding: false,
     draw: function () {
-      push();
+      p5.push();
       p5.fill(128, 119, 96);
       p5.stroke(50, 80, 0);
       p5.strokeWeight(2);
@@ -498,7 +498,7 @@ function createPlatform(x, y) {
       p5.fill(0, 100, 0);
       p5.stroke(0, 80, 0);
       p5.rect(this.x, this.y, this.w, this.h / 3, 5);
-      pop();
+      p5.pop();
     },
     collision: function () {
       if (
@@ -572,7 +572,7 @@ function Enemy(x) {
 
 function drawCollectable(t_collectable) {
   p5.fill(255, 215, 0);
-  ellipse(
+  p5.ellipse(
     t_collectable.pos_x,
     t_collectable.pos_y,
     t_collectable.size + 50,
@@ -580,7 +580,7 @@ function drawCollectable(t_collectable) {
   );
   p5.fill(0, 0, 0);
   p5.textSize(30);
-  textAlign(p5.LEFT);
+  p5.textAlign(p5.LEFT);
   p5.text("$", t_collectable.pos_x - 8, t_collectable.pos_y + 9);
   p5.textSize(12);
 }
@@ -604,7 +604,7 @@ function checkCollectable(t_collectable) {
 }
 
 function renderFlagpole() {
-  push();
+  p5.push();
   p5.strokeWeight(5);
   p5.stroke(180);
   p5.line(flagpole.pos_x, p5.floorPos_y, flagpole.pos_x, p5.floorPos_y - 250);
@@ -617,11 +617,11 @@ function renderFlagpole() {
     p5.rect(flagpole.pos_x, p5.floorPos_y - 50, 50, 50);
   }
 
-  pop();
+  p5.pop();
 }
 
 function checkFlagpole() {
-  var d = abs(gameChar_world_x - flagpole.pos_x);
+  let d = abs(gameChar_world_x - flagpole.pos_x);
 
   if (d < 15) {
     flagpole.isReached = true;

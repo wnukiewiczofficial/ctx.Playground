@@ -1,4 +1,4 @@
-var instructions =
+let instructions =
   "Some text. This is the minesweeper game. Made in HTML and Canvas. Regards :)";
 
 function drawBackground() {
@@ -36,7 +36,7 @@ function drawStatistics() {
   let w = (boxW / tilesInRow / 2) * 1.5,
     h = (boxW / tilesInRow / 2) * 1.5;
   ctx.save();
-  ctx.p5.fillStyle = "#FFFFFF";
+  ctx.fillStyle = "#FFFFFF";
   ctx.textAlign = "left";
   ctx.textBaseline = "middle";
   ctx.font = `${w}px Arial`;
@@ -47,7 +47,7 @@ function drawStatistics() {
     w,
     h
   );
-  ctx.p5.fillText(
+  ctx.fillText(
     flagCount,
     canvas.width / 2 - w * 2.5,
     canvas.height / 2 - boxH / 2 - (h / 2) * 1.5
@@ -64,7 +64,7 @@ function drawStatistics() {
     Math.floor(timePassed / 60) +
     ":" +
     (timePassed % 60 < 10 ? "0" + (timePassed % 60) : timePassed % 60);
-  ctx.p5.fillText(
+  ctx.fillText(
     timer,
     canvas.width / 2 + w * 1.5,
     canvas.height / 2 - boxH / 2 - (h / 2) * 1.5
@@ -78,13 +78,13 @@ function drawGameOver() {
   let w = canvas.width - (canvas.width / 6) * 2 - (canvas.width / 6) * 2;
   let h = canvas.height / 6;
 
-  ctx.p5.fillStyle = "#bd2626";
+  ctx.fillStyle = "#bd2626";
   ctx.strokeStyle = "#FFFFFF";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
   ctx.font = `${canvas.width / 10}px porkys`;
   ctx.strokeText("GAME OVER", canvas.width / 2, canvas.height / 2);
-  ctx.p5.fillText("GAME OVER", canvas.width / 2, canvas.height / 2);
+  ctx.fillText("GAME OVER", canvas.width / 2, canvas.height / 2);
   ctx.restore();
 }
 
@@ -94,28 +94,28 @@ function drawWin() {
   let w = canvas.width - (canvas.width / 6) * 2 - (canvas.width / 6) * 2;
   let h = canvas.height / 6;
 
-  ctx.p5.fillStyle = "#0e8c00";
+  ctx.fillStyle = "#0e8c00";
   ctx.strokeStyle = "#FFFFFF";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
   ctx.font = `${canvas.width / 10}px porkys`;
   ctx.strokeText("YOU WON", canvas.width / 2, canvas.height / 2);
-  ctx.p5.fillText("YOU WON", canvas.width / 2, canvas.height / 2);
+  ctx.fillText("YOU WON", canvas.width / 2, canvas.height / 2);
   ctx.restore();
 }
 
 // DIALOG
 function drawDialog() {
   ctx.save();
-  ctx.p5.fillStyle = "#bd2626";
-  ctx.p5.fillRect(
+  ctx.fillStyle = "#bd2626";
+  ctx.fillRect(
     canvas.width / 4,
     canvas.height / 2 - canvas.height * 0.3,
     canvas.width / 2,
     canvas.height * 0.65
   );
 
-  ctx.p5.fillStyle = "#FFFFFF";
+  ctx.fillStyle = "#FFFFFF";
   ctx.textAlign = "left";
   ctx.textBaseline = "middle";
   ctx.font = `${canvas.width / 50}px porkys`;
@@ -130,20 +130,20 @@ function drawDialog() {
 }
 
 function wrapText(text, x, y, maxWidth, lineHeight) {
-  var words = text.split(" ");
-  var line = "";
+  let words = text.split(" ");
+  let line = "";
 
-  for (var n = 0; n < words.length; n++) {
-    var testLine = line + words[n] + " ";
-    var metrics = ctx.measureText(testLine);
-    var testWidth = metrics.width;
+  for (let n = 0; n < words.length; n++) {
+    let testLine = line + words[n] + " ";
+    let metrics = ctx.measureText(testLine);
+    let testWidth = metrics.width;
     if (testWidth > maxWidth && n > 0) {
-      ctx.p5.fillText(line, x, y);
+      ctx.fillText(line, x, y);
       line = words[n] + " ";
       y += lineHeight;
     } else {
       line = testLine;
     }
   }
-  ctx.p5.fillText(line, x, y);
+  ctx.fillText(line, x, y);
 }

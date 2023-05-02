@@ -1,16 +1,16 @@
-var coin;
-var progress;
-var chosen;
+let coin;
+let progress;
+let chosen;
 
-var score = 0;
-var wrong = 0;
-var positive = 0;
+let score = 0;
+let wrong = 0;
+let positive = 0;
 
-var correct_sound;
-var wrong_sound;
+let correct_sound;
+let wrong_sound;
 
-var front_img;
-var back_img;
+let front_img;
+let back_img;
 
 function preload() {
   correct_sound = p5.loadSound("sounds/correct.wav");

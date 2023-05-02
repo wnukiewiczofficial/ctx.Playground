@@ -1,50 +1,50 @@
-var canvas = document.getElementById("canvas"); // Loading canvas from html
-var ctx = canvas.getConp5.text("2d"); // Loading 2d context
+let canvas = document.getElementById("canvas"); // Loading canvas from html
+let ctx = canvas.getConp5.text("2d"); // Loading 2d context
 canvas.width = window.innerWidth;
 canvas.height =
   window.innerWidth < 1366 && window.innerHeight >= 768
     ? window.innerWidth / 2
     : window.innerHeight; // 1366*768 ASPECT RATIO: THE HEIGHT FREEZES WHEN WIDTH < 1366px
 
-var dialog = true; // Check if the player stated the game (First run => Showing dialog with instructions)
-var started = false; // Checks if the game is frozen or not (lost or not)
-var won = false; // Checks if the game is won
+let dialog = true; // Check if the player stated the game (First run => Showing dialog with instructions)
+let started = false; // Checks if the game is frozen or not (lost or not)
+let won = false; // Checks if the game is won
 
 //BOX size (You can play with it however you want)
-var boxW = canvas.height * 0.7;
-var boxH = canvas.height * 0.7;
+let boxW = canvas.height * 0.7;
+let boxH = canvas.height * 0.7;
 
 // DYNAMIC VARIABLES (You can play with them however you want)
-var bombCount = 10;
-var tileCount = 64; // How many in one row = sqrt of this variable
-var tilesInRow = Math.sqrt(tileCount); // How many in one row = sqrt of this variable
+let bombCount = 10;
+let tileCount = 64; // How many in one row = sqrt of this variable
+let tilesInRow = Math.sqrt(tileCount); // How many in one row = sqrt of this variable
 
 //Statistics init
-var flagCount = 0;
-var correctFlags = 0;
-var timePassed = 0;
-var discovered = 0;
+let flagCount = 0;
+let correctFlags = 0;
+let timePassed = 0;
+let discovered = 0;
 
 // Interval function (Timer)
-var intervalVar;
+let intervalVar;
 
 // Images init
-var backgroundImg = new Image();
+let backgroundImg = new Image();
 backgroundImg.src = "./images/background.png";
-var logoImg = new Image();
+let logoImg = new Image();
 logoImg.src = "./images/logo.png";
 
-var flagImg = new Image();
+let flagImg = new Image();
 flagImg.src = "./images/flag.png";
-var bombImg = new Image();
+let bombImg = new Image();
 bombImg.src = "./images/bomb.png";
-var timeImg = new Image();
+let timeImg = new Image();
 timeImg.src = "./images/time.png";
-var tileImg = new Image();
+let tileImg = new Image();
 tileImg.src = "./images/tile.png";
 
 //Cells 2 Dimensional array
-var cells = new Array(tilesInRow);
+let cells = new Array(tilesInRow);
 createMap();
 
 // Updating positions, physics variables etc

@@ -26,7 +26,7 @@ export default function Play() {
         </div>
       </Link>
 
-      <div className="w-full h-full">
+      <div className="w-full h-full flex place-content-center">
         <Outlet />
       </div>
     </section>

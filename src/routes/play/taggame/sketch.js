@@ -1,15 +1,15 @@
-var players = [];
-var started = false;
+let players = [];
+let started = false;
 
-var menuBackgroundImg;
-var gameBackgroundImg;
+let menuBackgroundImg;
+let gameBackgroundImg;
 
-var gameBgX;
-var gameBgY;
-var bgDir;
+let gameBgX;
+let gameBgY;
+let bgDir;
 
-var titleFont;
-var infoFont;
+let titleFont;
+let infoFont;
 
 function preload() {
   menuBackgroundImg = p5.loadImage("backgroundMenu.jpg");
@@ -21,7 +21,7 @@ function preload() {
 function setup(p5, canvasParentRef) {
   p5.createCanvas(800, 800);
   frameRate(60);
-  rectMode(p5.CENTER);
+  p5.rectMode(p5.CENTER);
 
   Menu();
 

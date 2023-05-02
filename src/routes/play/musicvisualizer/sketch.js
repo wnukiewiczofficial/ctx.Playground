@@ -11,7 +11,7 @@ Enjoy the audio visualizer!
 -There is an example music attached to the project, so you can use it as well.
 */
 
-var shape; // Variable that will contain a main shape
+let shape; // Variable that will contain a main shape
 
 // Shape function with constructor
 function Shape() {
@@ -103,7 +103,7 @@ function Wave() {
   nop5.fill(); // Removing p5.fill
 
   // Starting to draw a shape, so the wave is infinite and without any free space
-  beginShape();
+  window.p5.beginShape();
   p5.strokeWeight(2); // Changing wave thickness
   p5.stroke(color(p5.random(0, 256), p5.random(0, 256), p5.random(0, 256))); // p5.randomize color in every point in the wave
 
@@ -114,9 +114,9 @@ function Wave() {
     let x = i; // Vertex for every x position available in the canvas
     let y = wave[idx] * 100 + p5.height / 2; // Vertex y postion depending on sound level
 
-    vertex(x, y); // Draw wave point
+    window.p5.vertex()x, y); // Draw wave point
   }
-  endShape();
+  window.p5.endShape();
 }
 
 // Function that draws "Bars"
@@ -140,16 +140,16 @@ function Bars() {
 }
 
 // Creating sound variables
-var music; // Contains music imported by the user
-var fft; // Contains p5.FFT element
-var amp; // Contains p5.Amplitude element
+let music; // Contains music imported by the user
+let fft; // Contains p5.FFT element
+let amp; // Contains p5.Amplitude element
 
 // HTML DOM
-var playButton; // Button
-var fileInput; // File input (for the music)
-var volumeSlider; // Volume slider
+let playButton; // Button
+let fileInput; // File input (for the music)
+let volumeSlider; // Volume slider
 
-var frame_counter = 0; // Counts frames that help with changing previous size of the shape
+let frame_counter = 0; // Counts frames that help with changing previous size of the shape
 
 // P5JS SETUP
 function setup(p5, canvasParentRef) {
@@ -175,7 +175,7 @@ function setup(p5, canvasParentRef) {
   fft = new p5.FFT();
   amp = new p5.Amplitude();
 
-  rectMode(p5.CENTER); // Setting up mode for any rect in the program, rect is centered
+  p5.rectMode(p5.CENTER); // Setting up mode for any rect in the program, rect is centered
 }
 
 // Callback function for the button
@@ -208,7 +208,7 @@ function checkTheFile(file) {
 // Function that draws the title of the program
 function Title() {
   p5.textSize(40); // Text size
-  textAlign(p5.CENTER); // Text align
+  p5.textAlign(p5.CENTER); // Text align
   p5.fill(255); // White p5.fill
   p5.stroke(255); // White outline
   p5.strokeWeight(1); // Normal thickness of the outline

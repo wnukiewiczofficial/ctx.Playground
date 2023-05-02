@@ -1,13 +1,13 @@
-var t = 0;
-var font;
+let t = 0;
+let font;
 
-var pickedStock;
+let pickedStock;
 
-var penaltyTimeout;
+let penaltyTimeout;
 
-var p5.randomSecond;
+let p5.randomSecond;
 
-var categories = [
+let categories = [
   { name: "Career", value: 0, col: undefined },
   { name: "Finance", value: 2, col: undefined },
   { name: "Personal Growth", value: 5, col: undefined },
@@ -18,16 +18,16 @@ var categories = [
   { name: "Attitude", value: 10, col: undefined },
 ];
 
-var luckiesUsed = 0;
-var firstUseDate;
+let luckiesUsed = 0;
+let firstUseDate;
 
-var wheel;
-var clock;
+let wheel;
+let clock;
 
-var cnv;
-var stock_title = document.querySelector("#stock_title");
+let cnv;
+let stock_title = document.querySelector("#stock_title");
 
-var bell;
+let bell;
 function preload() {
   bell = p5.loadSound("sounds/bell.wav");
 }

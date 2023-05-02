@@ -1,9 +1,9 @@
 function p5.background() {
-  ctx.p5.fillStyle = "#FFFFFF";
-  ctx.p5.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#FFFFFF";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
-var nearestObstacleIndex = 0;
+let nearestObstacleIndex = 0;
 function obstacleSystem(groundId) {
   let rnd = Math.floor(Math.random() * 2);
 

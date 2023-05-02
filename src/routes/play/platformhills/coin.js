@@ -8,12 +8,12 @@ function Coin(x, y) {
   };
 
   this.draw = function () {
-    push();
-    ellipseMode(CORNER);
+    p5.push();
+    p5.ellipseMode(p5.CORNER);
     p5.fill(200, 200, 0);
     p5.noStroke();
-    ellipse(this.x, this.y, this.d, this.d);
-    pop();
+    p5.ellipse(this.x, this.y, this.d, this.d);
+    p5.pop();
   };
 
   this.grabbed = function () {

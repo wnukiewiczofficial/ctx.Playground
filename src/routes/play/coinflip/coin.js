@@ -73,7 +73,7 @@ function Coin() {
 
   this.draw = function () {
     //Shape
-    push();
+    p5.push();
     rotateX(this.rotX);
     rotateY(PI / 2);
     normalMaterial();
@@ -81,28 +81,28 @@ function Coin() {
     scale(1.2);
     ellipsoid(this.r, this.r, this.r, 2, 10);
     p5.fill(0);
-    pop();
+    p5.pop();
 
     //Front
-    push();
+    p5.push();
     scale(1.2);
     rotateX(this.rotX);
-    translate(this.x, this.y, 1);
+    window.p5.translate(this.x, this.y, 1);
     texture(front_img);
     plane(this.r, this.r);
     nop5.fill();
     p5.stroke(100, 100, 100);
     p5.strokeWeight(2);
     smooth();
-    ellipse(0, 0, this.r * 2, this.r * 2);
-    ellipse(0, 0, this.r * 2 + 2, this.r * 2 + 2);
-    pop();
+    p5.ellipse(0, 0, this.r * 2, this.r * 2);
+    p5.ellipse(0, 0, this.r * 2 + 2, this.r * 2 + 2);
+    p5.pop();
 
     //Back
-    push();
-    rectMode(p5.CENTER);
+    p5.push();
+    p5.rectMode(p5.CENTER);
     rotateX(this.rotX);
-    translate(this.x, this.y, -1);
+    window.p5.translate(this.x, this.y, -1);
     scale(1.2, -1);
     texture(back_img);
     plane(this.r * 0.8, this.r);
@@ -110,24 +110,24 @@ function Coin() {
     p5.stroke(100, 100, 100);
     p5.strokeWeight(2);
     smooth();
-    ellipse(0, 0, this.r * 2, this.r * 2.4);
-    ellipse(0, 0, this.r * 2 + 2, this.r * 2.4 + 2);
+    p5.ellipse(0, 0, this.r * 2, this.r * 2.4);
+    p5.ellipse(0, 0, this.r * 2 + 2, this.r * 2.4 + 2);
     // arc(0,0,this.r*2,this.r*2.4, 0, PI*2);
     // strokeCap(PROJECT);
-    pop();
+    p5.pop();
 
     //Info
     if (this.flipping) {
-      push();
+      p5.push();
       progress.textAlign(p5.CENTER, p5.CENTER);
       progress.p5.textSize(progress.width * 0.04);
       progress.p5.fill(0);
       progress.textFont("Bebas Neue");
       progress.p5.text("Flipping...", progress.width / 2, progress.height / 2);
       texture(progress);
-      translate(0, (p5.height - progress.height * 1.5) / 2, 20);
+      window.p5.translate(0, (p5.height - progress.height * 1.5) / 2, 20);
       plane(p5.width, progress.height);
-      pop();
+      p5.pop();
     }
   };
 }

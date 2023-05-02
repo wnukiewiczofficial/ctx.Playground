@@ -1,4 +1,4 @@
-var mobileX, mobileY;
+let mobileX, mobileY;
 
 window.addEventListener("contextmenu", e => e.preventDefault()); // Deleting RMB context
 
@@ -19,7 +19,7 @@ function interact(e){
     createMap();
   }
   else if(started){
-    var pos = getMousePos(canvas, e);
+    let pos = getMousePos(canvas, e);
 
     if(won){
        Restart();
@@ -161,7 +161,7 @@ function interact(e){
 }
 
 window.addEventListener('mousemove', (e) => {
-  var pos = getMousePos(canvas, e);
+  let pos = getMousePos(canvas, e);
   if(pos.x > canvas.width/2 - boxW/2 && pos.x < canvas.width/2 + boxW/2 &&
      pos.y > canvas.height/2 - boxH/4 && pos.y < canvas.height/2 + boxH)
      {
@@ -171,7 +171,7 @@ window.addEventListener('mousemove', (e) => {
 
 // Function that returns mouse position
 function getMousePos(canvas, evt) {
-    var rect = canvas.getBoundingClientRect();
+    let rect = canvas.getBoundingClientRect();
     return {
         x: evt.clientX - rect.left,
         y: evt.clientY - rect.top

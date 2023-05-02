@@ -124,10 +124,10 @@ class Cell {
       ctx.font = `${boxW * 0.12}px Anton`;
       ctx.lineWidth = 0.4;
       if (hintCell && this.i == hintCell.i && this.j == hintCell.j) {
-        ctx.p5.fillStyle = this.applying ? "#40016b" : "#FFFFFF";
+        ctx.fillStyle = this.applying ? "#40016b" : "#FFFFFF";
         ctx.strokeStyle = this.applying ? "#40016b" : "#FFFFFF";
       } else {
-        ctx.p5.fillStyle = this.applying ? "#40016b" : "#FFFFFF";
+        ctx.fillStyle = this.applying ? "#40016b" : "#FFFFFF";
         ctx.strokeStyle = this.applying ? "#40016b" : "#FFFFFF";
       }
       ctx.textBaseline = "middle";
@@ -168,16 +168,16 @@ class Cell {
               break;
           }
         } else {
-          ctx.p5.fillText(this.value, this.x + this.w, this.y + this.h * 1.2);
+          ctx.fillText(this.value, this.x + this.w, this.y + this.h * 1.2);
           ctx.strokeText(this.value, this.x + this.w, this.y + this.h * 1.2);
         }
       } else {
         if (this.matched) {
           ctx.font = `${boxW * 0.1}px Anton`;
-          ctx.p5.fillText(this.value, this.x + this.w, this.y + this.h * 1.2);
+          ctx.fillText(this.value, this.x + this.w, this.y + this.h * 1.2);
           ctx.strokeText(this.value, this.x + this.w, this.y + this.h * 1.2);
         } else {
-          ctx.p5.fillText("?", this.x + this.w, this.y + this.h * 1.2);
+          ctx.fillText("?", this.x + this.w, this.y + this.h * 1.2);
           ctx.strokeText("?", this.x + this.w, this.y + this.h * 1.2);
         }
       }
@@ -185,8 +185,8 @@ class Cell {
       ctx.restore();
     } else {
       if (animationON && this.state != "bar") {
-        ctx.p5.fillStyle = "green";
-        ctx.p5.fillRect(this.x, this.y, this.w * 2, this.h * 2);
+        ctx.fillStyle = "green";
+        ctx.fillRect(this.x, this.y, this.w * 2, this.h * 2);
       }
       ctx.globalAlpha = this.tint;
       ctx.drawImage(cellMatchedImg, this.x, this.y, this.w * 2, this.h * 2);

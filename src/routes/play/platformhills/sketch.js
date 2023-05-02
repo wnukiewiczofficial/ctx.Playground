@@ -1,24 +1,24 @@
-var ground;
-var forest;
-var sky;
-var hero;
+let ground;
+let forest;
+let sky;
+let hero;
 
-var coins = [];
-var score = 0;
-var goal;
+let coins = [];
+let score = 0;
+let goal;
 
-var pits = [];
+let pits = [];
 
-var gravity = 12;
+let gravity = 12;
 
-var worldX = 0;
+let worldX = 0;
 
-var sounds = {};
+let sounds = {};
 
-var character = {};
-var environment = {};
+let character = {};
+let environment = {};
 
-var pitActiveIndex;
+let pitActiveIndex;
 
 function preload() {
   sounds.coin = p5.loadSound("sounds/coin.wav");
@@ -71,8 +71,8 @@ function draw() {
   ground.backLayerDraw();
   ground.update();
 
-  push();
-  translate(worldX, 0);
+  p5.push();
+  window.p5.translate(worldX, 0);
   forest.draw();
   sky.draw();
 
@@ -101,7 +101,7 @@ function draw() {
   } else {
     collisionInPit(pitActiveIndex);
   }
-  pop();
+  p5.pop();
 
   hero.lookForMotion();
   hero.draw();

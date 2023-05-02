@@ -19,7 +19,7 @@
         "name": "canvas"
       }
     ],
-    "type": "game"
+    "type": "done"
   },
   {
     "title": "Fill the triangle",
@@ -129,7 +129,7 @@
         "name": "canvas"
       }
     ],
-    "type": "game"
+    "type": "done"
   },
   {
     "title": "Clock Stock",
@@ -195,7 +195,7 @@
         "name": "canvas"
       }
     ],
-    "type": "game"
+    "type": "done"
   },
   {
     "title": "The Casino",
@@ -339,7 +339,7 @@
         "name": "p5js"
       }
     ],
-    "type": "game"
+    "type": "done"
   },
   {
     "title": "Shark bits",
@@ -388,5 +388,21 @@
       }
     ],
     "type": "game"
+  },
+  {
+    "title": "Snake",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "playgroundTo": "/playground/snake",
+    "playTo": "/play/snake",
+    "name": "snake",
+    "tags": [
+      {
+        "name": "canvas"
+      },
+      {
+        "name": "p5js"
+      }
+    ],
+    "type": "done"
   }
 ]

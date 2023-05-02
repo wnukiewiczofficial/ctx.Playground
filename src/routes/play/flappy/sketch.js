@@ -1,29 +1,29 @@
-var bird; // Variable that contains bird object
-var pipes = []; // An array of pipes
+let bird; // Variable that contains bird object
+let pipes = []; // An array of pipes
 
-var started = false; // If the game is started or not
+let started = false; // If the game is started or not
 
-var highscore = localStorage.getItem("highscore") || 0; // Pick a highscore from local storage, if it's empty then highscoe is 0
+let highscore = localStorage.getItem("highscore") || 0; // Pick a highscore from local storage, if it's empty then highscoe is 0
 
 //IMG (variable names clearly describe images)
-var backgroundImg;
-var pipeUpImg;
-var pipeDownImg;
-var baseImg; // Platform
-var birdImg = []; // Spritesheet of bird animation
-var base1X = 0,
+let backgroundImg;
+let pipeUpImg;
+let pipeDownImg;
+let baseImg; // Platform
+let birdImg = []; // Spritesheet of bird animation
+let base1X = 0,
   base2X; // Platform x positions, it is because bases are moving so variable must be dynamic
 
-var startImg;
-var gameoverImg;
-var gameovertxtImg;
-var medalImg;
-var newImg;
+let startImg;
+let gameoverImg;
+let gameovertxtImg;
+let medalImg;
+let newImg;
 
 //SOUNDS (variable names clearly describe sounds)
-var scoreSound;
-var hitSound;
-var flySound;
+let scoreSound;
+let hitSound;
+let flySound;
 
 // P5JS PRELOAD
 function preload() {
@@ -104,7 +104,7 @@ function UI() {
     ); // Showing silver medal
 
     p5.textSize(40); // Text size of 40px
-    textAlign(p5.RIGHT); // Text Align to right, so if the score has more digits, they push the text to the left not to the right
+    p5.textAlign(p5.RIGHT); // Text Align to right, so if the score has more digits, they push the text to the left not to the right
     p5.text(
       bird.score,
       p5.width / 2 + (p5.width * 0.25) / 2,
@@ -155,7 +155,7 @@ function showScore() {
   p5.stroke(0); // Black outline
   p5.strokeWeight(2); // 2px outline thickness
   p5.fill(255); // White p5.fill
-  textAlign(p5.CENTER); // Centered text
+  p5.textAlign(p5.CENTER); // Centered text
   p5.text(bird.score, p5.width / 2, p5.textAscent() * 2); // Drawing live score on the screen
 }
 

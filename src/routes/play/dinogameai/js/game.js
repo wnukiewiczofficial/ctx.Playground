@@ -1,18 +1,18 @@
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getConp5.text("2d");
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getConp5.text("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight * 0.6;
 
-var sprites = new Image();
+let sprites = new Image();
 sprites.src = "assets/sprites.png";
 
-var dino = new Dino();
-var grounds = [
+let dino = new Dino();
+let grounds = [
   new Ground(0),
   new Ground(canvas.width / 2),
   new Ground(canvas.width),
 ];
-var obstacles = [new Cactus(), new Cactus(), new Cactus()];
+let obstacles = [new Cactus(), new Cactus(), new Cactus()];
 
 // Updating, maths, physics
 function update() {

@@ -31,20 +31,16 @@ class Pointer {
   draw() {
     ctx.save();
     ctx.strokeStyle = "#000000";
-    ctx.p5.fillStyle = this.color;
+    ctx.fillStyle = this.color;
     ctx.lineWidth = 3;
-    ctx.p5.fillRect(this.x, this.y, this.d, this.d);
+    ctx.fillRect(this.x, this.y, this.d, this.d);
 
-    ctx.p5.fillStyle = "#FFFFFF";
+    ctx.fillStyle = "#FFFFFF";
     ctx.textBaseline = "bottom";
     ctx.textAlign = "center";
     ctx.font = `${this.d / 4}px porkys`;
-    ctx.p5.fillText("Change", this.x + this.d / 2, this.y + this.d / 2);
-    ctx.p5.fillText(
-      "side",
-      this.x + this.d / 2,
-      this.y + this.d / 2 + this.d / 4
-    );
+    ctx.fillText("Change", this.x + this.d / 2, this.y + this.d / 2);
+    ctx.fillText("side", this.x + this.d / 2, this.y + this.d / 2 + this.d / 4);
     ctx.strokeText("Change", this.x + this.d / 2, this.y + this.d / 2);
     ctx.strokeText(
       "side",

@@ -16,7 +16,7 @@ function domInfo() {
   p5.stroke(0);
   p5.strokeWeight(5);
   p5.textSize(60);
-  textAlign(p5.CENTER, p5.CENTER);
+  p5.textAlign(p5.CENTER, p5.CENTER);
   textFont(infoFont);
   p5.text(
     "Enter player nicknames !",
@@ -30,7 +30,7 @@ function gameTitle() {
   p5.stroke(0);
   p5.strokeWeight(5);
   p5.textSize(150);
-  textAlign(p5.CENTER, p5.CENTER);
+  p5.textAlign(p5.CENTER, p5.CENTER);
   textFont(titleFont);
   p5.text("TAG GAME", p5.width / 2, p5.height / 2);
 }

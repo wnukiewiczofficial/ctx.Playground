@@ -1,39 +1,39 @@
-var canvas;
+let canvas;
 
-var score = 0;
-var lives = 3;
-var lost = false;
-var gameStopped = false;
+let score = 0;
+let lives = 3;
+let lost = false;
+let gameStopped = false;
 
-var scene = "menu";
+let scene = "menu";
 
-var boss;
+let boss;
 
-var shark;
-var obstacles = [];
+let shark;
+let obstacles = [];
 
-var bullets = [];
-var tridents = [];
+let bullets = [];
+let tridents = [];
 
 //Buttons
-var playBtn;
+let playBtn;
 
-var menu_bg_img = [];
-var enemies_img = [];
-var shark_img = [];
-var gun_img;
-var bg_img = [];
+let menu_bg_img = [];
+let enemies_img = [];
+let shark_img = [];
+let gun_img;
+let bg_img = [];
 
-var boss_img;
-var trident_img;
+let boss_img;
+let trident_img;
 
 //Musuic
-var background_song;
-var kill_sound;
-var shoot_sound;
-var die_sound;
+let background_song;
+let kill_sound;
+let shoot_sound;
+let die_sound;
 
-var bg = [],
+let bg = [],
   bgmid = [],
   bgfor = [];
 
@@ -254,16 +254,16 @@ function UI() {
     p5.fill(0);
     p5.stroke(255);
     p5.strokeWeight(p5.width * 0.002);
-    textAlign(p5.RIGHT, p5.TOP);
+    p5.textAlign(p5.RIGHT, p5.TOP);
     p5.textSize(p5.width * 0.06);
     p5.text(`Score: ${score}`,p5.width, 0);
-    textAlign(p5.LEFT, p5.TOP);
+    p5.textAlign(p5.LEFT, p5.TOP);
     p5.text(`Lives: ${lives}`, 0, 0);
 
     if (lost) {
       p5.fill(200, 0, 0);
       p5.stroke(0);
-      textAlign(p5.CENTER, p5.CENTER);
+      p5.textAlign(p5.CENTER, p5.CENTER);
       p5.text(`You lost!`,p5.width / 2, p5.height / 2);
       p5.text(`Click to restart...`,p5.width / 2, p5.height / 2 + p5.textAscent());
     }
