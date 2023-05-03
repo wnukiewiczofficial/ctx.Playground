@@ -26,7 +26,11 @@ export default function Play() {
         </div>
       </Link>
 
-      <div className="w-full h-full flex place-content-center">
+      <h1 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-accent text-xl md:text-6xl font-bold">
+        Loading...
+      </h1>
+
+      <div className="relative w-full h-full flex place-content-center">
         <Outlet />
       </div>
     </section>

@@ -87,7 +87,7 @@ class Boss {
       this.h * 0.05
     );
 
-    nop5.fill();
+    nop5.noFill();
     p5.stroke(0);
     p5.strokeWeight(p5.width * 0.002);
     p5.rect(

@@ -14,6 +14,8 @@ import ChaseTheBall from "./routes/play/chasetheball/sketch";
 import TicTacToe from "./routes/play/tictactoe/sketch";
 import Snake from "./routes/play/snake/sketch";
 import ThePong from "./routes/play/thepong/sketch";
+import MusicVisualizer from "./routes/play/musicvisualizer/sketch";
+import TagGame from "./routes/play/taggame/sketch";
 // import MusicVisualizer from "./routes/play/musicvisualizer/sketch";
 // import Snake from "./routes/play/snake/sketch";
 /// HERE TO COMMENT OUT
@@ -29,6 +31,8 @@ export default function Routing() {
     tictactoe: TicTacToe,
     snake: Snake,
     thepong: ThePong,
+    musicvisualizer: MusicVisualizer,
+    taggame: TagGame,
   };
 
   return (

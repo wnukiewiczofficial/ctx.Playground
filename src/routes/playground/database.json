@@ -63,7 +63,7 @@
         "name": "canvas"
       }
     ],
-    "type": "game"
+    "type": "done"
   },
   {
     "title": "Paint",
@@ -387,7 +387,7 @@
         "name": "p5js"
       }
     ],
-    "type": "game"
+    "type": "done"
   },
   {
     "title": "Snake",

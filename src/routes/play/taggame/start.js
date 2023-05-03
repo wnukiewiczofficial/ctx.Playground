@@ -1,10 +1,26 @@
 let nicknameInput1;
 let nicknameInput2;
 let button;
-let requireLabel = null;
+let requireInfo;
+import {
+  p5,
+  menuBackgroundImg,
+  infoFont,
+  titleFont,
+  players,
+  started,
+  cnvParent,
+} from "./globals";
+import Player from "./player";
 
-function Menu() {
-  image(menuBackgroundImg, -width / 2, 0, p5.width * 2, p5.height); // BG
+export default function Menu() {
+  p5.value.image(
+    menuBackgroundImg.value,
+    -p5.value.width / 2,
+    0,
+    p5.value.width * 2,
+    p5.value.height
+  ); // BG
 
   domInfo();
   createForm();
@@ -12,61 +28,67 @@ function Menu() {
 }
 
 function domInfo() {
-  p5.fill(255);
-  p5.stroke(0);
-  p5.strokeWeight(5);
-  p5.textSize(60);
-  p5.textAlign(p5.CENTER, p5.CENTER);
-  textFont(infoFont);
-  p5.text(
+  p5.value.fill(255);
+  p5.value.stroke(0);
+  p5.value.strokeWeight(5);
+  p5.value.textSize(60);
+  p5.value.textAlign(p5.value.CENTER, p5.value.CENTER);
+  p5.value.textFont(infoFont.value);
+  p5.value.text(
     "Enter player nicknames !",
-    p5.width / 2,
-    p5.height / 4 - p5.textAscent()
+    p5.value.width / 2,
+    p5.value.height / 4 - p5.value.textAscent()
   );
 }
 
 function gameTitle() {
-  nop5.fill();
-  p5.stroke(0);
-  p5.strokeWeight(5);
-  p5.textSize(150);
-  p5.textAlign(p5.CENTER, p5.CENTER);
-  textFont(titleFont);
-  p5.text("TAG GAME", p5.width / 2, p5.height / 2);
+  p5.value.noFill();
+  p5.value.stroke(0);
+  p5.value.strokeWeight(5);
+  p5.value.textSize(150);
+  p5.value.textAlign(p5.value.CENTER, p5.value.CENTER);
+  p5.value.textFont(titleFont.value);
+  p5.value.text("TAG GAME", p5.value.width / 2, p5.value.height / 2);
 }
 
 function createForm() {
   try {
-    nicknameInput1 = createInput(players[0].nickname);
+    nicknameInput1 = p5.value.createInput(players.value[0].nickname);
   } catch (err) {
-    nicknameInput1 = createInput("");
+    nicknameInput1 = p5.value.createInput("");
   }
-  nicknameInput1.position(p5.width / 2 - 220, p5.height / 4);
+  nicknameInput1.position(p5.value.width / 2 - 220, p5.value.height / 4);
   nicknameInput1.size(200);
   nicknameInput1.attribute("placeholder", "Player 1");
   nicknameInput1.attribute("maxlength", "8");
+  nicknameInput1.attribute("required", "true");
+  nicknameInput1.parent(cnvParent.value);
 
   try {
-    nicknameInput2 = createInput(players[1].nickname);
+    nicknameInput2 = p5.value.createInput(players.value[1].nickname);
   } catch (err) {
-    nicknameInput2 = createInput("");
+    nicknameInput2 = p5.value.createInput("");
   }
-  nicknameInput2.position(p5.width / 2 + 20, p5.height / 4);
+  nicknameInput2.position(p5.value.width / 2 + 20, p5.value.height / 4);
   nicknameInput2.size(200);
   nicknameInput2.attribute("placeholder", "Player 2");
   nicknameInput2.attribute("maxlength", "8");
+  nicknameInput2.attribute("required", "true");
+  nicknameInput2.parent(cnvParent.value);
 
-  button = createButton("Start the game");
-  button.position(p5.width / 2 - 75, p5.height / 4 + 30);
+  button = p5.value.createButton("Start the game");
+  button.position(p5.value.width / 2 - 75, p5.value.height / 4 + 30);
   button.size(150);
   button.mousePressed(buttonStart);
+  button.parent(cnvParent.value);
 
-  requireInfo = createP("Both fields are required!");
-  requireInfo.position(p5.width / 2 - 84, p5.height / 4 - 35);
+  requireInfo = p5.value.createP("Both fields are required!");
+  requireInfo.position(p5.value.width / 2 - 84, p5.value.height / 4 - 35);
   requireInfo.style("color", "#FF0000");
   requireInfo.style("font-weight", "bold");
   requireInfo.size(168);
   requireInfo.hide();
+  requireInfo.parent(cnvParent.value);
 }
 
 function buttonStart() {
@@ -76,20 +98,23 @@ function buttonStart() {
     button.remove();
     requireInfo.remove();
 
-    started = true;
-    players[0] = new Player(
+    started.set(true);
+    let pl = players.value;
+    pl[0] = new Player(
       50,
-      p5.height - 0.03 * (p5.width + p5.height),
+      p5.value.height - 0.03 * (p5.value.width + p5.value.height),
       nicknameInput1.value(),
       0
     );
-    players[1] = new Player(
-      p5.width - 50,
-      0.03 * (p5.width + p5.height),
+    pl[1] = new Player(
+      p5.value.width - 50,
+      0.03 * (p5.value.width + p5.value.height),
       nicknameInput2.value(),
       1
     );
-    players[Math.floor(Math.random() * 2)].tagged = true;
+    pl[Math.floor(Math.random() * 2)].tagged = true;
+
+    players.set(pl);
   } else {
     requireInfo.show();
   }

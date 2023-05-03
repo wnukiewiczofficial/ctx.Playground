@@ -1,7 +1,9 @@
-class Player {
+import { p5, players, started, infoFont } from "./globals";
+import Menu from "./start";
+export default class Player {
   constructor(x, y, nickname, id) {
-    this.w = 0.04 * (p5.width + p5.height);
-    this.h = 0.04 * (p5.width + p5.height);
+    this.w = 0.04 * (p5.value.width + p5.value.height);
+    this.h = 0.04 * (p5.value.width + p5.value.height);
     this.x = x;
     this.y = y;
     this.xvel = 0;
@@ -9,7 +11,7 @@ class Player {
     this.speed = 1;
     this.xgravity = 0.5;
     this.ygravity = 0.5;
-    this.col = color(0, 0, 0);
+    this.col = p5.value.color(0, 0, 0);
     this.tagged = false;
     this.tagTime = 8;
     this.counterControl = 0;
@@ -20,23 +22,25 @@ class Player {
 
   draw() {
     if (!this.winner)
-      this.col = this.tagged ? color(200, 0, 0) : color(0, 0, 0);
-    else this.col = color(0, 200, 0);
-    p5.noStroke();
-    p5.fill(this.col);
+      this.col = this.tagged
+        ? p5.value.color(200, 0, 0)
+        : p5.value.color(0, 0, 0);
+    else this.col = p5.value.color(0, 200, 0);
+    p5.value.noStroke();
+    p5.value.fill(this.col);
 
-    if (this.tagTime <= 0) this.x = -2 * p5.width;
-    p5.rect(this.x, this.y, this.w, this.h);
+    if (this.tagTime <= 0) this.x = -2 * p5.value.width;
+    p5.value.rect(this.x, this.y, this.w, this.h);
 
-    p5.stroke(this.col);
-    p5.textSize(14);
-    p5.textAlign(p5.CENTER, BOTTOM);
-    textFont(infoFont);
-    p5.text(this.nickname, this.x, this.y - this.h / 2);
+    p5.value.stroke(this.col);
+    p5.value.textSize(14);
+    p5.value.textAlign(p5.value.CENTER, p5.value.BOTTOM);
+    p5.value.textFont(infoFont.value);
+    p5.value.text(this.nickname, this.x, this.y - this.h / 2);
     if (this.winner) {
-      p5.textSize(30);
-      p5.textAlign(p5.CENTER, p5.TOP);
-      p5.text("WINNER", this.x, this.y + this.h / 2);
+      p5.value.textSize(30);
+      p5.value.textAlign(p5.value.CENTER, p5.value.TOP);
+      p5.value.text("WINNER", this.x, this.y + this.h / 2);
     }
   }
 
@@ -49,21 +53,23 @@ class Player {
       }
 
       if (this.tagTime > 0) {
-        p5.fill(255);
-        p5.stroke(255);
-        p5.strokeWeight(0.5);
-        p5.textSize(30);
-        p5.textAlign(p5.CENTER, p5.CENTER);
-        textFont(infoFont);
-        p5.text(this.tagTime, this.x, this.y);
+        p5.value.fill(255);
+        p5.value.stroke(255);
+        p5.value.strokeWeight(0.5);
+        p5.value.textSize(30);
+        p5.value.textAlign(p5.value.CENTER, p5.value.CENTER);
+        p5.value.textFont(infoFont.value);
+        p5.value.text(this.tagTime, this.x, this.y);
       } else {
         this.tagged = false;
         this.tagTime = 0;
         setTimeout(() => {
-          started = false;
+          started.set(false);
           Menu();
         }, 5000);
-        players[this.id == 0 ? 1 : 0].winner = true;
+        let pl = players.value;
+        pl[this.id == 0 ? 1 : 0].winner = true;
+        players.set(pl);
       }
     }
   }
@@ -89,53 +95,75 @@ class Player {
       this.x = this.w / 2;
       this.xvel *= -1;
     }
-    if (this.x + this.w / 2 > p5.width) {
-      this.x = p5.width - this.w / 2;
+    if (this.x + this.w / 2 > p5.value.width) {
+      this.x = p5.value.width - this.w / 2;
       this.xvel *= -1;
     }
     if (this.y - this.h / 2 < 0) {
       this.y = this.h / 2;
       this.yvel *= -1;
     }
-    if (this.y + this.h / 2 > p5.height) {
-      this.y = p5.height - this.h / 2;
+    if (this.y + this.h / 2 > p5.value.height) {
+      this.y = p5.value.height - this.h / 2;
       this.yvel *= -1;
     }
 
-    for (let player in players) {
-      if (players[player] != this) {
+    for (let player in players.value) {
+      if (players.value[player] != this) {
         if (
-          this.x + this.w / 2 >= players[player].x - players[player].w / 2 &&
-          this.x - this.w / 2 <= players[player].x + players[player].w / 2 &&
-          this.y + this.h / 2 >= players[player].y - players[player].h / 2 &&
-          this.y - this.h / 2 <= players[player].y + players[player].h / 2
+          this.x + this.w / 2 >=
+            players.value[player].x - players.value[player].w / 2 &&
+          this.x - this.w / 2 <=
+            players.value[player].x + players.value[player].w / 2 &&
+          this.y + this.h / 2 >=
+            players.value[player].y - players.value[player].h / 2 &&
+          this.y - this.h / 2 <=
+            players.value[player].y + players.value[player].h / 2
         ) {
           if (this.tagged) {
             setTimeout(() => {
-              players[player].tagged = true;
-              players[player].tagTime = 6;
+              let pl = players.value;
+              pl[player].tagged = true;
+              pl[player].tagTime = 6;
+              players.set(pl);
               this.tagged = false;
             }, 20);
           }
-          if (this.x <= players[player].x) {
+          if (this.x <= players.value[player].x) {
             this.xvel *= -1;
-            players[player].xvel -=
-              players[player].x - this.x + (this.xvel - players[player].xvel);
+            let pl = players.value;
+            pl[player].xvel -=
+              players.value[player].x -
+              this.x +
+              (this.xvel - players.value[player].xvel);
+            players.set(pl);
           }
-          if (this.x >= players[player].x) {
+          if (this.x >= players.value[player].x) {
             this.xvel *= -1;
-            players[player].xvel -=
-              players[player].x - this.x + (this.xvel - players[player].xvel);
+            let pl = players.value;
+            pl[player].xvel -=
+              players.value[player].x -
+              this.x +
+              (this.xvel - players.value[player].xvel);
+            players.set(pl);
           }
-          if (this.y <= players[player].y) {
+          if (this.y <= players.value[player].y) {
             this.yvel *= -1;
-            players[player].yvel -=
-              players[player].y - this.y + (this.yvel - players[player].yvel);
+            let pl = players.value;
+            pl[player].yvel -=
+              players.value[player].y -
+              this.y +
+              (this.yvel - players.value[player].yvel);
+            players.set(pl);
           }
-          if (this.y >= players[player].y) {
+          if (this.y >= players.value[player].y) {
             this.yvel *= -1;
-            players[player].yvel -=
-              players[player].y - this.y + (this.yvel - players[player].yvel);
+            let pl = players.value;
+            pl[player].yvel -=
+              players.value[player].y -
+              this.y +
+              (this.yvel - players.value[player].yvel);
+            players.set(pl);
           }
         }
       }
@@ -144,29 +172,29 @@ class Player {
 
   input() {
     if (this.id == 0) {
-      if (keyIsDown(87)) {
+      if (p5.value.keyIsDown(87)) {
         this.yvel -= this.speed;
       }
-      if (keyIsDown(83)) {
+      if (p5.value.keyIsDown(83)) {
         this.yvel += this.speed;
       }
-      if (keyIsDown(65)) {
+      if (p5.value.keyIsDown(65)) {
         this.xvel -= this.speed;
       }
-      if (keyIsDown(68)) {
+      if (p5.value.keyIsDown(68)) {
         this.xvel += this.speed;
       }
     } else if (this.id == 1) {
-      if (keyIsDown(UP_ARROW)) {
+      if (p5.value.keyIsDown(p5.value.UP_ARROW)) {
         this.yvel -= this.speed;
       }
-      if (keyIsDown(DOWN_ARROW)) {
+      if (p5.value.keyIsDown(p5.value.DOWN_ARROW)) {
         this.yvel += this.speed;
       }
-      if (keyIsDown(p5.LEFT_ARROW)) {
+      if (p5.value.keyIsDown(p5.value.LEFT_ARROW)) {
         this.xvel -= this.speed;
       }
-      if (keyIsDown(p5.RIGHT_ARROW)) {
+      if (p5.value.keyIsDown(p5.value.RIGHT_ARROW)) {
         this.xvel += this.speed;
       }
     }

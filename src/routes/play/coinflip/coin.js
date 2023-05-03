@@ -90,7 +90,7 @@ function Coin() {
     window.p5.translate(this.x, this.y, 1);
     texture(front_img);
     plane(this.r, this.r);
-    nop5.fill();
+    nop5.noFill();
     p5.stroke(100, 100, 100);
     p5.strokeWeight(2);
     smooth();
@@ -106,7 +106,7 @@ function Coin() {
     scale(1.2, -1);
     texture(back_img);
     plane(this.r * 0.8, this.r);
-    nop5.fill();
+    nop5.noFill();
     p5.stroke(100, 100, 100);
     p5.strokeWeight(2);
     smooth();
