@@ -30,7 +30,7 @@ export default function Play() {
         Loading...
       </h1>
 
-      <div className="relative w-full h-full flex place-content-center">
+      <div className="relative w-full h-full flex place-content-center place-items-center">
         <Outlet />
       </div>
     </section>

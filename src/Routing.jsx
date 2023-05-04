@@ -16,6 +16,9 @@ import Snake from "./routes/play/snake/sketch";
 import ThePong from "./routes/play/thepong/sketch";
 import MusicVisualizer from "./routes/play/musicvisualizer/sketch";
 import TagGame from "./routes/play/taggame/sketch";
+import TheClock from "./routes/play/theclock/sketch";
+import FillTheTriangle from "./routes/play/fillthetriangle/sketch";
+import RadarChart from "./routes/play/radarchart/sketch";
 // import MusicVisualizer from "./routes/play/musicvisualizer/sketch";
 // import Snake from "./routes/play/snake/sketch";
 /// HERE TO COMMENT OUT
@@ -33,6 +36,9 @@ export default function Routing() {
     thepong: ThePong,
     musicvisualizer: MusicVisualizer,
     taggame: TagGame,
+    theclock: TheClock,
+    fillthetriangle: FillTheTriangle,
+    radarchart: RadarChart,
   };
 
   return (

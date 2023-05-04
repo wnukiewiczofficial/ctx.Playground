@@ -41,7 +41,7 @@
         "name": "canvas"
       }
     ],
-    "type": "game"
+    "type": "done"
   },
   {
     "title": "Music Visualizer",
@@ -64,28 +64,6 @@
       }
     ],
     "type": "done"
-  },
-  {
-    "title": "Paint",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
-    "playgroundTo": "/playground/paint",
-    "playTo": "/play/paint",
-    "name": "paint",
-    "tags": [
-      {
-        "name": "p5js"
-      },
-      {
-        "name": "responsive"
-      },
-      {
-        "name": "canvas"
-      },
-      {
-        "name": "canvas"
-      }
-    ],
-    "type": "game"
   },
   {
     "title": "Trader",
@@ -132,11 +110,11 @@
     "type": "done"
   },
   {
-    "title": "Clock Stock",
+    "title": "The Clock",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
-    "playgroundTo": "/playground/clockstock",
-    "playTo": "/play/clockstock",
-    "name": "clockstock",
+    "playgroundTo": "/playground/theclock",
+    "playTo": "/play/theclock",
+    "name": "theclock",
     "tags": [
       {
         "name": "p5js"
@@ -151,7 +129,7 @@
         "name": "canvas"
       }
     ],
-    "type": "game"
+    "type": "done"
   },
   {
     "title": "M letter",
@@ -294,22 +272,6 @@
     "type": "game"
   },
   {
-    "title": "Wise Owl",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
-    "playgroundTo": "/playground/wiseowl",
-    "playTo": "/play/wiseowl",
-    "name": "wiseowl",
-    "tags": [
-      {
-        "name": "canvas"
-      },
-      {
-        "name": "p5js"
-      }
-    ],
-    "type": "game"
-  },
-  {
     "title": "Platform Hills",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
     "playgroundTo": "/playground/platformhills",
@@ -371,7 +333,7 @@
         "name": "p5js"
       }
     ],
-    "type": "game"
+    "type": "done"
   },
   {
     "title": "Tag Game",

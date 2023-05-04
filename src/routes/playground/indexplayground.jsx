@@ -5,7 +5,7 @@ export default function IndexPlayground() {
   return (
     <section className=" w-full h-full overflow-hidden flex flex-col gap-6 mt-20 lg:mt-0 py-6 lg:py-12 px-12 md:px-32 lg:px-12 text-center lg:text-left">
       <h1 className="text-accent text-3xl lg:text-5xl font-semibold">
-        Welcome to ctx.Playground!
+        Welcome to <span className="text-accentTwo">ctx.</span>Playground!
       </h1>
       <p className="text-accentTwo">
         This is my <span className="text-additional">portfolio</span> of canvas
