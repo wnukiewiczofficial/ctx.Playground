@@ -1,7 +1,4 @@
-import Button from "../../components/button";
-import { Link } from "react-router-dom";
-
-export default function TemplatePlayground({ game }) {
+export default function LetterMPlayground({ game }) {
   return (
     <section className=" w-full h-full text-accent overflow-hidden flex flex-col gap-8 mt-20 lg:mt-0 py-6 lg:py-12 px-12 md:px-32 lg:px-12 text-center lg:text-left">
       {/* Title */}
@@ -35,10 +32,6 @@ export default function TemplatePlayground({ game }) {
         vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique
         lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.
       </p>
-      {/* Play button */}
-      <Link to={`/play/${game.name}`}>
-        <Button>Play</Button>
-      </Link>
     </section>
   );
 }

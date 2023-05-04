@@ -132,11 +132,11 @@
     "type": "done"
   },
   {
-    "title": "M letter",
+    "title": "Letter M",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
-    "playgroundTo": "/playground/mletter",
-    "playTo": "/play/mletter",
-    "name": "mletter",
+    "playgroundTo": "/playground/letterm",
+    "playTo": "/play/letterm",
+    "name": "letterm",
     "tags": [
       {
         "name": "p5js"

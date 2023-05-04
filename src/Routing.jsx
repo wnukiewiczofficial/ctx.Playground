@@ -24,6 +24,8 @@ import RadarChart from "./routes/play/radarchart/sketch";
 /// HERE TO COMMENT OUT
 // import Casino from "./routes/play/artbyline/sketch";
 
+import LetterMPlayground from "./routes/playground/letterm";
+
 /// END
 import gameDatabase from "./routes/playground/database.json";
 
@@ -41,6 +43,10 @@ export default function Routing() {
     radarchart: RadarChart,
   };
 
+  const playgroundComponents = {
+    letterm: LetterMPlayground,
+  };
+
   return (
     <main className="w-screen h-screen bg-main font-chakra color">
       <Routes>
@@ -51,7 +57,14 @@ export default function Routing() {
         >
           <Route index element={<IndexPlayground />} />
           {gameDatabase.map((game, i) => {
-            return (
+            const GamePlayground = playgroundComponents[game.name];
+            return GamePlayground ? (
+              <Route
+                key={i}
+                path={gameDatabase[i].name}
+                element={<GamePlayground game={gameDatabase[i]} />}
+              />
+            ) : (
               <Route
                 key={i}
                 path={gameDatabase[i].name}
@@ -65,7 +78,11 @@ export default function Routing() {
           {gameDatabase.map((game, i) => {
             const Game = gameComponents[game.name];
             return Game ? (
-              <Route key={i} path={gameDatabase[i].name} element={<Game />} />
+              <Route
+                key={i}
+                path={gameDatabase[i].name}
+                element={<Game game={gameDatabase[i]} />}
+              />
             ) : null;
           })}
           <Route path="*" element={<Play />} />
