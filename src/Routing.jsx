@@ -20,11 +20,15 @@ import TheClock from "./routes/play/theclock/sketch";
 import FillTheTriangle from "./routes/play/fillthetriangle/sketch";
 import RadarChart from "./routes/play/radarchart/sketch";
 import Paint from "./routes/play/paint/sketch";
-// import MusicVisualizer from "./routes/play/musicvisualizer/sketch";
-// import Snake from "./routes/play/snake/sketch";
-/// HERE TO COMMENT OUT
-// import Casino from "./routes/play/artbyline/sketch";
+import Trader from "./routes/play/trader/frame";
+import Casino from "./routes/play/casino/frame";
+import CoinFlip from "./routes/play/coinflip/frame";
+import DeliveryTruck from "./routes/play/deliverytruck/frame";
+import DinoAI from "./routes/play/dinoai/frame";
+import Minesweeper from "./routes/play/minesweeper/frame";
+import SharkBits from "./routes/play/sharkbits/frame";
 
+// Playground routes
 import LetterMPlayground from "./routes/playground/letterm";
 
 /// END
@@ -43,6 +47,13 @@ export default function Routing() {
     fillthetriangle: FillTheTriangle,
     radarchart: RadarChart,
     paint: Paint,
+    trader: Trader,
+    casino: Casino,
+    coinflip: CoinFlip,
+    deliverytruck: DeliveryTruck,
+    dinoai: DinoAI,
+    minesweeper: Minesweeper,
+    sharkbits: SharkBits,
   };
 
   const playgroundComponents = {
