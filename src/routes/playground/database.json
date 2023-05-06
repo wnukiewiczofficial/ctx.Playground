@@ -44,6 +44,28 @@
     "type": "done"
   },
   {
+    "title": "Paint",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "playgroundTo": "/playground/paint",
+    "playTo": "/play/paint",
+    "name": "paint",
+    "tags": [
+      {
+        "name": "p5js"
+      },
+      {
+        "name": "responsive"
+      },
+      {
+        "name": "canvas"
+      },
+      {
+        "name": "canvas"
+      }
+    ],
+    "type": "done"
+  },
+  {
     "title": "Music Visualizer",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
     "playgroundTo": "/playground/musicvisualizer",
@@ -366,5 +388,21 @@
       }
     ],
     "type": "done"
+  },
+  {
+    "title": "Driver",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "playgroundTo": "/playground/driver",
+    "playTo": "/play/driver",
+    "name": "driver",
+    "tags": [
+      {
+        "name": "canvas"
+      },
+      {
+        "name": "p5js"
+      }
+    ],
+    "type": "game"
   }
 ]

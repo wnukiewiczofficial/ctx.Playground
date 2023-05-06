@@ -19,6 +19,7 @@ import TagGame from "./routes/play/taggame/sketch";
 import TheClock from "./routes/play/theclock/sketch";
 import FillTheTriangle from "./routes/play/fillthetriangle/sketch";
 import RadarChart from "./routes/play/radarchart/sketch";
+import Paint from "./routes/play/paint/sketch";
 // import MusicVisualizer from "./routes/play/musicvisualizer/sketch";
 // import Snake from "./routes/play/snake/sketch";
 /// HERE TO COMMENT OUT
@@ -41,6 +42,7 @@ export default function Routing() {
     theclock: TheClock,
     fillthetriangle: FillTheTriangle,
     radarchart: RadarChart,
+    paint: Paint,
   };
 
   const playgroundComponents = {

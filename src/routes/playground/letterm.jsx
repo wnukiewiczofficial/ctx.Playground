@@ -1,7 +1,6 @@
 export default function LetterMPlayground({ game }) {
   return (
     <section className=" w-full h-full text-accent overflow-hidden flex flex-col gap-8 mt-20 lg:mt-0 py-6 lg:py-12 px-12 md:px-32 lg:px-12 text-center lg:text-left">
-      {/* Title */}
       <h1 className="text-3xl lg:text-5xl font-semibold">{game.title}</h1>
       {/* Gallery */}
       <div className="grid grid-cols-2 gap-4 place-content-center">
