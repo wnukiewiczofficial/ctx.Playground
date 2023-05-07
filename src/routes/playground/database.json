@@ -23,7 +23,7 @@
         "name": "automatic"
       }
     ],
-    "images": ["/playground/artbyline.png"],
+    "images": ["/images/artbyline.png"],
     "type": "program"
   },
   {
@@ -47,7 +47,7 @@
         "name": "painting"
       }
     ],
-    "images": ["/playground/fillthetriangle.png"],
+    "images": ["/images/fillthetriangle.png"],
     "type": "game",
     "stars": 1
   },
@@ -71,7 +71,7 @@
         "name": "painting"
       }
     ],
-    "images": ["/playground/paint.png"],
+    "images": ["/images/paint.png"],
     "type": "program"
   },
   {
@@ -100,7 +100,7 @@
         "name": "music"
       }
     ],
-    "images": ["/playground/musicvisualizer.png"],
+    "images": ["/images/musicvisualizer.png"],
     "type": "program",
     "stars": 2
   },
@@ -133,7 +133,7 @@
         "name": "money"
       }
     ],
-    "images": ["/playground/trader.png"],
+    "images": ["/images/trader.png"],
     "type": "game",
     "stars": 2
   },
@@ -160,7 +160,7 @@
         "name": "popular"
       }
     ],
-    "images": ["/playground/tictactoe.png"],
+    "images": ["/images/tictactoe.png"],
     "type": "game"
   },
   {
@@ -180,7 +180,7 @@
         "name": "practical"
       }
     ],
-    "images": ["/playground/clock.png"],
+    "images": ["/images/clock.png"],
     "type": "program"
   },
   {
@@ -241,7 +241,7 @@
         "name": "focus"
       }
     ],
-    "images": ["/playground/chasetheball.png"],
+    "images": ["/images/chasetheball.png"],
     "type": "game"
   },
   {
@@ -277,9 +277,9 @@
       }
     ],
     "images": [
-      "/playground/casino.png",
-      "/playground/casino2.png",
-      "/playground/casino3.png"
+      "/images/casino.png",
+      "/images/casino2.png",
+      "/images/casino3.png"
     ],
     "type": "game",
     "stars": 3
@@ -313,7 +313,7 @@
         "name": "luck"
       }
     ],
-    "images": ["/playground/coinflip.png"],
+    "images": ["/images/coinflip.png"],
     "type": "game",
     "stars": 2
   },
@@ -344,9 +344,9 @@
       }
     ],
     "images": [
-      "/playground/deliverytruck.png",
-      "/playground/deliverytruck2.png",
-      "/playground/deliverytruck3.png"
+      "/images/deliverytruck.png",
+      "/images/deliverytruck2.png",
+      "/images/deliverytruck3.png"
     ],
     "type": "game",
     "stars": 1
@@ -377,7 +377,7 @@
         "name": "chromeDino"
       }
     ],
-    "images": ["/playground/dinoai.png"],
+    "images": ["/images/dinoai.png"],
     "type": "game"
   },
   {
@@ -404,9 +404,9 @@
       }
     ],
     "images": [
-      "/playground/flappy.png",
-      "/playground/flappy2.png",
-      "/playground/flappy3.png"
+      "/images/flappy.png",
+      "/images/flappy2.png",
+      "/images/flappy3.png"
     ],
     "type": "game"
   },
@@ -436,7 +436,7 @@
         "name": "custom"
       }
     ],
-    "images": ["/playground/minesweeper.png"],
+    "images": ["/images/minesweeper.png"],
     "type": "game",
     "stars": 1
   },
@@ -472,7 +472,7 @@
         "name": "traps"
       }
     ],
-    "images": ["/playground/platformhills.png"],
+    "images": ["/images/platformhills.png"],
     "type": "game"
   },
   {
@@ -501,7 +501,7 @@
         "name": "difficulty"
       }
     ],
-    "images": ["/playground/pong.png", "/playground/pong2.png"],
+    "images": ["/images/pong.png", "/images/pong2.png"],
     "type": "game",
     "stars": 2
   },
@@ -546,7 +546,7 @@
         "name": "lives"
       }
     ],
-    "images": ["/playground/sharkbits.png", "/playground/sharkbits2.png"],
+    "images": ["/images/sharkbits.png", "/images/sharkbits2.png"],
     "type": "game",
     "stars": 3
   },
@@ -570,7 +570,7 @@
         "name": "picking"
       }
     ],
-    "images": ["/playground/radarchart.png"],
+    "images": ["/images/radarchart.png"],
     "type": "program"
   },
   {
@@ -594,9 +594,9 @@
       }
     ],
     "images": [
-      "/playground/taggame.png",
-      "/playground/taggame2.png",
-      "/playground/taggame3.png"
+      "/images/taggame.png",
+      "/images/taggame2.png",
+      "/images/taggame3.png"
     ],
     "type": "game",
     "stars": 3
@@ -621,7 +621,7 @@
         "name": "infinite"
       }
     ],
-    "images": ["/playground/snake.png"],
+    "images": ["/images/snake.png"],
     "type": "game"
   }
 ]
