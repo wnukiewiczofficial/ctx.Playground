@@ -6,6 +6,7 @@ import Entrance from "./routes/entrance";
 import Playground from "./routes/playground";
 import IndexPlayground from "./routes/playground/indexplayground";
 import TemplatePlayground from "./routes/playground/templateplayground";
+import LetterMPlayground from "./routes/playground/letterm";
 
 // Play imports
 import Play from "./routes/play";
@@ -27,9 +28,8 @@ import DeliveryTruck from "./routes/play/deliverytruck/frame";
 import DinoAI from "./routes/play/dinoai/frame";
 import Minesweeper from "./routes/play/minesweeper/frame";
 import SharkBits from "./routes/play/sharkbits/frame";
-
-// Playground routes
-import LetterMPlayground from "./routes/playground/letterm";
+import Flappy from "./routes/play/flappy/frame";
+import PlatformHills from "./routes/play/platformhills/frame";
 
 /// END
 import gameDatabase from "./routes/playground/database.json";
@@ -54,6 +54,8 @@ export default function Routing() {
     dinoai: DinoAI,
     minesweeper: Minesweeper,
     sharkbits: SharkBits,
+    flappy: Flappy,
+    platformhills: PlatformHills,
   };
 
   const playgroundComponents = {

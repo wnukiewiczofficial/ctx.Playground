@@ -1,14 +1,54 @@
+/* eslint-disable react/prop-types */
+import ThreeDot from "../../assets/letterm/3dDot.png";
+import Arc from "../../assets/letterm/arc.png";
+import Broken from "../../assets/letterm/broken.png";
+import Brush from "../../assets/letterm/brush.png";
+import Card from "../../assets/letterm/card.png";
+import Circle from "../../assets/letterm/circle.png";
+import Cisco from "../../assets/letterm/cisco.png";
+import Cross from "../../assets/letterm/cross.png";
+import Dot from "../../assets/letterm/dot.png";
+import Flat from "../../assets/letterm/flat.png";
+import Hook from "../../assets/letterm/hook.png";
+import Noise from "../../assets/letterm/noise.png";
+import Ortho from "../../assets/letterm/ortho.png";
+import Pattern from "../../assets/letterm/pattern.png";
+import Reverse from "../../assets/letterm/reverse.png";
+import Reverted from "../../assets/letterm/reverted.png";
+import Sandal from "../../assets/letterm/sandal.png";
+import Sphere from "../../assets/letterm/sphere.png";
+import Splash from "../../assets/letterm/splash.png";
+import Stroke from "../../assets/letterm/stroke.png";
+import Triangle from "../../assets/letterm/triangle.png";
+
 export default function LetterMPlayground({ game }) {
+  const letters = [
+    { name: "3D Dot", src: ThreeDot },
+    { name: "Arc", src: Arc },
+    { name: "Broken", src: Broken },
+    { name: "Brush", src: Brush },
+    { name: "Card", src: Card },
+    { name: "Circle", src: Circle },
+    { name: "Cisco", src: Cisco },
+    { name: "Cross", src: Cross },
+    { name: "Dot", src: Dot },
+    { name: "Flat", src: Flat },
+    { name: "Hook", src: Hook },
+    { name: "Noise", src: Noise },
+    { name: "Ortho", src: Ortho },
+    { name: "Pattern", src: Pattern },
+    { name: "Reverse", src: Reverse },
+    { name: "Reverted", src: Reverted },
+    { name: "Sandal", src: Sandal },
+    { name: "Sphere", src: Sphere },
+    { name: "Splash", src: Splash },
+    { name: "Stroke", src: Stroke },
+    { name: "Triangle", src: Triangle },
+  ];
+
   return (
-    <section className=" w-full h-full text-accent overflow-hidden flex flex-col gap-8 mt-20 lg:mt-0 py-6 lg:py-12 px-12 md:px-32 lg:px-12 text-center lg:text-left">
+    <section className=" w-full h-full text-accent overflow-auto flex flex-col gap-8 mt-20 lg:mt-0 py-6 lg:py-12 px-12 md:px-32 lg:px-12 text-center lg:text-left">
       <h1 className="text-3xl lg:text-5xl font-semibold">{game.title}</h1>
-      {/* Gallery */}
-      <div className="grid grid-cols-2 gap-4 place-content-center">
-        <img src="" alt="Image1" />
-        <img src="" alt="Image2" />
-        <img src="" alt="Image3" />
-        <img src="" alt="Image4" />
-      </div>
       {/* Tags */}
       <div className="w-full flex gap-4 items-center">
         <span className="bg-accent flex items-center h-full text-main px-4 font-semibold rounded">
@@ -24,13 +64,21 @@ export default function LetterMPlayground({ game }) {
           })}
         </div>
       </div>
+
       {/* Description */}
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales
-        erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa
-        vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique
-        lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.
-      </p>
+      <p className="text-xl px-12 py-4">{game.description}</p>
+
+      {/* Gallery */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-12 place-content-center">
+        {letters.map((letter, i) => {
+          return (
+            <figure key={i} className="text-2xl font-semibold">
+              <figcaption className="ml-4">{letter.name}</figcaption>
+              <img src={letter.src} alt={letter.name + " M"} />
+            </figure>
+          );
+        })}
+      </div>
     </section>
   );
 }

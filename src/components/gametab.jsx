@@ -12,7 +12,7 @@ export default function GameTab({
 
   function selectTab() {
     setSelectedTab(id);
-    setNavOpen(false);
+    if (setNavOpen) setNavOpen(false);
   }
 
   return (

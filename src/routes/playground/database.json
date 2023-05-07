@@ -9,17 +9,21 @@
       {
         "name": "p5js"
       },
+
+      {
+        "name": "canvas"
+      },
       {
         "name": "responsive"
       },
       {
-        "name": "canvas"
+        "name": "art"
       },
       {
-        "name": "canvas"
+        "name": "automatic"
       }
     ],
-    "type": "done"
+    "type": "program"
   },
   {
     "title": "Fill the triangle",
@@ -31,17 +35,18 @@
       {
         "name": "p5js"
       },
-      {
-        "name": "responsive"
-      },
+
       {
         "name": "canvas"
       },
       {
-        "name": "canvas"
+        "name": "focus"
+      },
+      {
+        "name": "painting"
       }
     ],
-    "type": "done"
+    "type": "game"
   },
   {
     "title": "Paint",
@@ -54,16 +59,16 @@
         "name": "p5js"
       },
       {
-        "name": "responsive"
-      },
-      {
         "name": "canvas"
       },
       {
-        "name": "canvas"
+        "name": "free will"
+      },
+      {
+        "name": "painting"
       }
     ],
-    "type": "done"
+    "type": "program"
   },
   {
     "title": "Music Visualizer",
@@ -76,16 +81,22 @@
         "name": "p5js"
       },
       {
+        "name": "dom"
+      },
+      {
+        "name": "canvas"
+      },
+      {
         "name": "responsive"
       },
       {
-        "name": "canvas"
+        "name": "custom"
       },
       {
-        "name": "canvas"
+        "name": "music"
       }
     ],
-    "type": "done"
+    "type": "program"
   },
   {
     "title": "Trader",
@@ -95,19 +106,28 @@
     "name": "trader",
     "tags": [
       {
+        "name": "hosted"
+      },
+      {
         "name": "p5js"
+      },
+      {
+        "name": "canvas"
       },
       {
         "name": "responsive"
       },
       {
-        "name": "canvas"
+        "name": "focus"
       },
       {
-        "name": "canvas"
+        "name": "left/right"
+      },
+      {
+        "name": "money"
       }
     ],
-    "type": "done"
+    "type": "game"
   },
   {
     "title": "Tic Tac Toe",
@@ -120,16 +140,19 @@
         "name": "p5js"
       },
       {
+        "name": "canvas"
+      },
+      {
         "name": "responsive"
       },
       {
-        "name": "canvas"
+        "name": "simple"
       },
       {
-        "name": "canvas"
+        "name": "popular"
       }
     ],
-    "type": "done"
+    "type": "game"
   },
   {
     "title": "The Clock",
@@ -142,20 +165,17 @@
         "name": "p5js"
       },
       {
-        "name": "responsive"
-      },
-      {
         "name": "canvas"
       },
       {
-        "name": "canvas"
+        "name": "practical"
       }
     ],
-    "type": "done"
+    "type": "program"
   },
   {
     "title": "Letter M",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Discover 21 unique hand-drawn letters in a variety of styles in my showcase, all made using p5js. Not only can you appreciate the final designs, but you can also see the code used to create them. From elegant script to bold block letters, each letter is a testament to my creativity and versatility as an artist. ",
     "playgroundTo": "/playground/letterm",
     "playTo": "/play/letterm",
     "name": "letterm",
@@ -164,16 +184,25 @@
         "name": "p5js"
       },
       {
-        "name": "responsive"
-      },
-      {
         "name": "canvas"
       },
       {
-        "name": "canvas"
+        "name": "art"
+      },
+      {
+        "name": "creative"
+      },
+      {
+        "name": "design"
+      },
+      {
+        "name": "ideas"
+      },
+      {
+        "name": "code"
       }
     ],
-    "type": "game"
+    "type": "showcase"
   },
   {
     "title": "Chase the ball",
@@ -186,16 +215,22 @@
         "name": "p5js"
       },
       {
-        "name": "responsive"
-      },
-      {
         "name": "canvas"
       },
       {
-        "name": "canvas"
+        "name": "levels"
+      },
+      {
+        "name": "mouse"
+      },
+      {
+        "name": "avoid"
+      },
+      {
+        "name": "focus"
       }
     ],
-    "type": "done"
+    "type": "game"
   },
   {
     "title": "The Casino",
@@ -205,16 +240,31 @@
     "name": "casino",
     "tags": [
       {
+        "name": "hosted"
+      },
+      {
         "name": "canvas"
+      },
+      {
+        "name": "vanillaJS"
       },
       {
         "name": "responsive"
       },
       {
-        "name": "p5js"
+        "name": "luck"
+      },
+      {
+        "name": "animations"
+      },
+      {
+        "name": "finding"
+      },
+      {
+        "name": "numbers"
       }
     ],
-    "type": "done"
+    "type": "game"
   },
   {
     "title": "Coin Flip",
@@ -224,10 +274,25 @@
     "name": "coinflip",
     "tags": [
       {
+        "name": "hosted"
+      },
+      {
         "name": "canvas"
       },
       {
         "name": "p5js"
+      },
+      {
+        "name": "responsive"
+      },
+      {
+        "name": "DOM"
+      },
+      {
+        "name": "3D"
+      },
+      {
+        "name": "luck"
       }
     ],
     "type": "game"
@@ -240,10 +305,22 @@
     "name": "deliverytruck",
     "tags": [
       {
+        "name": "hosted"
+      },
+      {
         "name": "canvas"
       },
       {
-        "name": "p5js"
+        "name": "vanillaJS"
+      },
+      {
+        "name": "delviering"
+      },
+      {
+        "name": "driving"
+      },
+      {
+        "name": "avoding"
       }
     ],
     "type": "game"
@@ -256,23 +333,47 @@
     "name": "dinoai",
     "tags": [
       {
-        "name": "p5js"
+        "name": "hosted"
+      },
+      {
+        "name": "vanillaJS"
+      },
+      {
+        "name": "AI"
+      },
+      {
+        "name": "streaming"
+      },
+      {
+        "name": "counter"
+      },
+      {
+        "name": "chromeDino"
       }
     ],
     "type": "game"
   },
   {
-    "title": "Flappy P5",
+    "title": "Flappy",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
-    "playgroundTo": "/playground/flappyp5",
-    "playTo": "/play/flappyp5",
-    "name": "flappyp5",
+    "playgroundTo": "/playground/flappy",
+    "playTo": "/play/flappy",
+    "name": "flappy",
     "tags": [
+      {
+        "name": "hosted"
+      },
       {
         "name": "canvas"
       },
       {
         "name": "p5js"
+      },
+      {
+        "name": "recreation"
+      },
+      {
+        "name": "jumping"
       }
     ],
     "type": "game"
@@ -285,10 +386,22 @@
     "name": "minesweeper",
     "tags": [
       {
+        "name": "hosted"
+      },
+      {
         "name": "canvas"
       },
       {
-        "name": "p5js"
+        "name": "vanillaJS"
+      },
+      {
+        "name": "responsive"
+      },
+      {
+        "name": "bombs"
+      },
+      {
+        "name": "custom"
       }
     ],
     "type": "game"
@@ -301,10 +414,28 @@
     "name": "platformhills",
     "tags": [
       {
+        "name": "hosted"
+      },
+      {
         "name": "canvas"
       },
       {
         "name": "p5js"
+      },
+      {
+        "name": "spritesheet"
+      },
+      {
+        "name": "platformer"
+      },
+      {
+        "name": "animations"
+      },
+      {
+        "name": "collecting"
+      },
+      {
+        "name": "traps"
       }
     ],
     "type": "game"
@@ -321,9 +452,21 @@
       },
       {
         "name": "p5js"
+      },
+      {
+        "name": "responsive"
+      },
+      {
+        "name": "mobile"
+      },
+      {
+        "name": "AI"
+      },
+      {
+        "name": "difficulty"
       }
     ],
-    "type": "done"
+    "type": "game"
   },
   {
     "title": "Shark bits",
@@ -333,10 +476,31 @@
     "name": "sharkbits",
     "tags": [
       {
+        "name": "hosted"
+      },
+      {
         "name": "canvas"
       },
       {
-        "name": "p5js"
+        "name": "vanillaJS"
+      },
+      {
+        "name": "responsive"
+      },
+      {
+        "name": "mobile"
+      },
+      {
+        "name": "shooting"
+      },
+      {
+        "name": "boss"
+      },
+      {
+        "name": "avoiding"
+      },
+      {
+        "name": "lives"
       }
     ],
     "type": "game"
@@ -353,9 +517,15 @@
       },
       {
         "name": "p5js"
+      },
+      {
+        "name": "data"
+      },
+      {
+        "name": "picking"
       }
     ],
-    "type": "done"
+    "type": "program"
   },
   {
     "title": "Tag Game",
@@ -369,9 +539,15 @@
       },
       {
         "name": "p5js"
+      },
+      {
+        "name": "2 players"
+      },
+      {
+        "name": "nicknames"
       }
     ],
-    "type": "done"
+    "type": "game"
   },
   {
     "title": "Snake",
@@ -385,8 +561,14 @@
       },
       {
         "name": "p5js"
+      },
+      {
+        "name": "smooth"
+      },
+      {
+        "name": "infinite"
       }
     ],
-    "type": "done"
+    "type": "game"
   }
 ]
