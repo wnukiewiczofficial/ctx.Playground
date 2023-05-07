@@ -72,7 +72,7 @@ export default function TemplatePlayground({ game }) {
       {/* Play button */}
       <Link
         className="hover:opacity-80 active:opacity-60 transition-opacity duration-200"
-        to={`/play/${game.name}`}
+        to={`/ctx.Playground/play/${game.name}`}
         onMouseEnter={() => {
           gradientRef.current.classList.add("-translate-y-[10%]");
         }}

@@ -20,7 +20,7 @@ export default function Play() {
 
   return (
     <section className="w-full h-full flex flex-col place-content-center">
-      <Link to={`/playground/${gameName}`}>
+      <Link to={`/ctx.Playground/playground/${gameName}`}>
         <div className="w-full flex justify-center items-center p-4 bg-accent">
           <h1 className="font-semibold text-xl">Back to playground</h1>
         </div>
