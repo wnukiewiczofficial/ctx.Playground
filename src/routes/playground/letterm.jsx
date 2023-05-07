@@ -21,6 +21,8 @@ import Splash from "../../assets/letterm/splash.png";
 import Stroke from "../../assets/letterm/stroke.png";
 import Triangle from "../../assets/letterm/triangle.png";
 
+import { AiFillStar } from "react-icons/ai";
+
 export default function LetterMPlayground({ game }) {
   const letters = [
     { name: "3D Dot", src: ThreeDot },
@@ -47,13 +49,24 @@ export default function LetterMPlayground({ game }) {
   ];
 
   return (
-    <section className=" w-full h-full text-accent overflow-auto flex flex-col gap-8 mt-20 lg:mt-0 py-6 lg:py-12 px-12 md:px-32 lg:px-12 text-center lg:text-left">
-      <div className="flex items-end gap-4">
-        <h1 className="text-3xl lg:text-5xl font-semibold">{game.title}</h1>
-        <span>({game.type})</span>
+    <section className=" w-full h-full text-accent overflow-auto flex flex-col gap-8 mt-20 lg:mt-0 py-6 lg:py-12 px-12 md:px-32 lg:px-12 text-center">
+      {/* Title */}
+      <div className="flex items-end gap-4 justify-center">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold">
+          {game.title}
+        </h1>
+        {/* Stars */}
+        <div className="flex flex-col items-center">
+          <div className="flex gap-2 text-accent">
+            {[...Array(game.stars || 0)].map((star, i) => {
+              return <AiFillStar key={i} className="text-2xl" />;
+            })}
+          </div>
+          <span>({game.type})</span>
+        </div>
       </div>
       {/* Tags */}
-      <div className="w-full flex gap-4 items-center">
+      <div className="w-full flex gap-4 items-center justify-center">
         <span className="bg-accent flex items-center h-full text-main px-4 font-semibold rounded">
           Tags
         </span>

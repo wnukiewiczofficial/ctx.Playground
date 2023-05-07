@@ -12,6 +12,12 @@ export default function NavBar({ gameDatabase }) {
   const didMount = useRef(false);
   const [selectedTab, setSelectedTab] = useState(null);
 
+  const games = gameDatabase.sort((a, b) => {
+    if (a.title > b.title) return 1;
+    else if (a.title < b.title) return -1;
+    return 0;
+  });
+
   useEffect(() => {
     if (didMount.current) {
       if (navOpen) {
@@ -50,7 +56,7 @@ export default function NavBar({ gameDatabase }) {
         style={{ transform: "translateY(-100%)" }}
         className={`lg:hidden overflow-auto bg-main fixed z-[-1] w-full grid grid-cols-2 md:grid-cols-3 p-6 gap-6`}
       >
-        {gameDatabase.map((game, i) => {
+        {games.map((game, i) => {
           return (
             <li key={i}>
               <Link to={game.playgroundTo}>
@@ -73,7 +79,7 @@ export default function NavBar({ gameDatabase }) {
       <ul
         className={`overflow-auto hidden lg:flex h-full w-full flex-col pr-6 mb-12 gap-2 scrollbar scrollbar-thumb-accent scrollbar-track-accent/10`}
       >
-        {gameDatabase.map((game, i) => {
+        {games.map((game, i) => {
           return (
             <li key={i}>
               <Link to={game.playgroundTo}>

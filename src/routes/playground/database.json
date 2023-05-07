@@ -7,7 +7,7 @@
     "name": "artbyline",
     "tags": [
       {
-        "name": "p5js"
+        "name": "react-p5js"
       },
 
       {
@@ -23,6 +23,7 @@
         "name": "automatic"
       }
     ],
+    "images": ["/playground/artbyline.png"],
     "type": "program"
   },
   {
@@ -33,7 +34,7 @@
     "name": "fillthetriangle",
     "tags": [
       {
-        "name": "p5js"
+        "name": "react-p5js"
       },
 
       {
@@ -46,6 +47,7 @@
         "name": "painting"
       }
     ],
+    "images": ["/playground/fillthetriangle.png"],
     "type": "game",
     "stars": 1
   },
@@ -57,7 +59,7 @@
     "name": "paint",
     "tags": [
       {
-        "name": "p5js"
+        "name": "react-p5js"
       },
       {
         "name": "canvas"
@@ -69,6 +71,7 @@
         "name": "painting"
       }
     ],
+    "images": ["/playground/paint.png"],
     "type": "program"
   },
   {
@@ -79,7 +82,7 @@
     "name": "musicvisualizer",
     "tags": [
       {
-        "name": "p5js"
+        "name": "react-p5js"
       },
       {
         "name": "dom"
@@ -97,6 +100,7 @@
         "name": "music"
       }
     ],
+    "images": ["/playground/musicvisualizer.png"],
     "type": "program",
     "stars": 2
   },
@@ -111,7 +115,7 @@
         "name": "hosted"
       },
       {
-        "name": "p5js"
+        "name": "vanillaJS"
       },
       {
         "name": "canvas"
@@ -129,6 +133,7 @@
         "name": "money"
       }
     ],
+    "images": ["/playground/trader.png"],
     "type": "game",
     "stars": 2
   },
@@ -140,7 +145,7 @@
     "name": "tictactoe",
     "tags": [
       {
-        "name": "p5js"
+        "name": "react-p5js"
       },
       {
         "name": "canvas"
@@ -155,6 +160,7 @@
         "name": "popular"
       }
     ],
+    "images": ["/playground/tictactoe.png"],
     "type": "game"
   },
   {
@@ -165,7 +171,7 @@
     "name": "theclock",
     "tags": [
       {
-        "name": "p5js"
+        "name": "react-p5js"
       },
       {
         "name": "canvas"
@@ -174,6 +180,7 @@
         "name": "practical"
       }
     ],
+    "images": ["/playground/clock.png"],
     "type": "program"
   },
   {
@@ -206,7 +213,7 @@
       }
     ],
     "type": "showcase",
-    "stars": 1
+    "stars": 2
   },
   {
     "title": "Chase the ball",
@@ -216,7 +223,7 @@
     "name": "chasetheball",
     "tags": [
       {
-        "name": "p5js"
+        "name": "react-p5js"
       },
       {
         "name": "canvas"
@@ -234,6 +241,7 @@
         "name": "focus"
       }
     ],
+    "images": ["/playground/chasetheball.png"],
     "type": "game"
   },
   {
@@ -268,6 +276,11 @@
         "name": "numbers"
       }
     ],
+    "images": [
+      "/playground/casino.png",
+      "/playground/casino2.png",
+      "/playground/casino3.png"
+    ],
     "type": "game",
     "stars": 3
   },
@@ -300,6 +313,7 @@
         "name": "luck"
       }
     ],
+    "images": ["/playground/coinflip.png"],
     "type": "game",
     "stars": 2
   },
@@ -328,6 +342,11 @@
       {
         "name": "avoding"
       }
+    ],
+    "images": [
+      "/playground/deliverytruck.png",
+      "/playground/deliverytruck2.png",
+      "/playground/deliverytruck3.png"
     ],
     "type": "game",
     "stars": 1
@@ -358,6 +377,7 @@
         "name": "chromeDino"
       }
     ],
+    "images": ["/playground/dinoai.png"],
     "type": "game"
   },
   {
@@ -382,6 +402,11 @@
       {
         "name": "jumping"
       }
+    ],
+    "images": [
+      "/playground/flappy.png",
+      "/playground/flappy2.png",
+      "/playground/flappy3.png"
     ],
     "type": "game"
   },
@@ -411,6 +436,7 @@
         "name": "custom"
       }
     ],
+    "images": ["/playground/minesweeper.png"],
     "type": "game",
     "stars": 1
   },
@@ -446,6 +472,7 @@
         "name": "traps"
       }
     ],
+    "images": ["/playground/platformhills.png"],
     "type": "game"
   },
   {
@@ -459,7 +486,7 @@
         "name": "canvas"
       },
       {
-        "name": "p5js"
+        "name": "react-p5js"
       },
       {
         "name": "responsive"
@@ -474,6 +501,7 @@
         "name": "difficulty"
       }
     ],
+    "images": ["/playground/pong.png", "/playground/pong2.png"],
     "type": "game",
     "stars": 2
   },
@@ -491,13 +519,19 @@
         "name": "canvas"
       },
       {
-        "name": "vanillaJS"
+        "name": "p5js"
       },
       {
         "name": "responsive"
       },
       {
         "name": "mobile"
+      },
+      {
+        "name": "sound"
+      },
+      {
+        "name": "animations"
       },
       {
         "name": "shooting"
@@ -512,6 +546,7 @@
         "name": "lives"
       }
     ],
+    "images": ["/playground/sharkbits.png", "/playground/sharkbits2.png"],
     "type": "game",
     "stars": 3
   },
@@ -526,7 +561,7 @@
         "name": "canvas"
       },
       {
-        "name": "p5js"
+        "name": "react-p5js"
       },
       {
         "name": "data"
@@ -535,6 +570,7 @@
         "name": "picking"
       }
     ],
+    "images": ["/playground/radarchart.png"],
     "type": "program"
   },
   {
@@ -548,7 +584,7 @@
         "name": "canvas"
       },
       {
-        "name": "p5js"
+        "name": "react-p5js"
       },
       {
         "name": "2 players"
@@ -556,6 +592,11 @@
       {
         "name": "nicknames"
       }
+    ],
+    "images": [
+      "/playground/taggame.png",
+      "/playground/taggame2.png",
+      "/playground/taggame3.png"
     ],
     "type": "game",
     "stars": 3
@@ -571,7 +612,7 @@
         "name": "canvas"
       },
       {
-        "name": "p5js"
+        "name": "react-p5js"
       },
       {
         "name": "smooth"
@@ -580,6 +621,7 @@
         "name": "infinite"
       }
     ],
+    "images": ["/playground/snake.png"],
     "type": "game"
   }
 ]
