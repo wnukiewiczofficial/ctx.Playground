@@ -48,7 +48,7 @@ export default function NavBar({ gameDatabase }) {
       <ul
         ref={navRef}
         style={{ transform: "translateY(-100%)" }}
-        className={`lg:hidden overflow-auto bg-main fixed z-[-1] w-full grid grid-cols-2 md:grid-cols-3 p-6 gap-2`}
+        className={`lg:hidden overflow-auto bg-main fixed z-[-1] w-full grid grid-cols-2 md:grid-cols-3 p-6 gap-6`}
       >
         {gameDatabase.map((game, i) => {
           return (
@@ -60,6 +60,7 @@ export default function NavBar({ gameDatabase }) {
                   setNavOpen={setNavOpen}
                   selected={i === selectedTab}
                   gameType={game.type}
+                  stars={game.stars ?? 0}
                 >
                   {game.title}
                 </GameTab>
@@ -81,6 +82,7 @@ export default function NavBar({ gameDatabase }) {
                   setSelectedTab={setSelectedTab}
                   selected={i === selectedTab}
                   gameType={game.type}
+                  stars={game.stars ?? 0}
                 >
                   {game.title}
                 </GameTab>

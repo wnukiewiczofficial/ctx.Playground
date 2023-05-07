@@ -46,7 +46,8 @@
         "name": "painting"
       }
     ],
-    "type": "game"
+    "type": "game",
+    "stars": 1
   },
   {
     "title": "Paint",
@@ -96,7 +97,8 @@
         "name": "music"
       }
     ],
-    "type": "program"
+    "type": "program",
+    "stars": 2
   },
   {
     "title": "Trader",
@@ -127,7 +129,8 @@
         "name": "money"
       }
     ],
-    "type": "game"
+    "type": "game",
+    "stars": 2
   },
   {
     "title": "Tic Tac Toe",
@@ -202,7 +205,8 @@
         "name": "code"
       }
     ],
-    "type": "showcase"
+    "type": "showcase",
+    "stars": 1
   },
   {
     "title": "Chase the ball",
@@ -264,7 +268,8 @@
         "name": "numbers"
       }
     ],
-    "type": "game"
+    "type": "game",
+    "stars": 3
   },
   {
     "title": "Coin Flip",
@@ -295,7 +300,8 @@
         "name": "luck"
       }
     ],
-    "type": "game"
+    "type": "game",
+    "stars": 2
   },
   {
     "title": "Delivery Truck",
@@ -323,7 +329,8 @@
         "name": "avoding"
       }
     ],
-    "type": "game"
+    "type": "game",
+    "stars": 1
   },
   {
     "title": "Dino AI",
@@ -404,7 +411,8 @@
         "name": "custom"
       }
     ],
-    "type": "game"
+    "type": "game",
+    "stars": 1
   },
   {
     "title": "Platform Hills",
@@ -466,7 +474,8 @@
         "name": "difficulty"
       }
     ],
-    "type": "game"
+    "type": "game",
+    "stars": 2
   },
   {
     "title": "Shark bits",
@@ -503,7 +512,8 @@
         "name": "lives"
       }
     ],
-    "type": "game"
+    "type": "game",
+    "stars": 3
   },
   {
     "title": "Radar Chart",
@@ -547,7 +557,8 @@
         "name": "nicknames"
       }
     ],
-    "type": "game"
+    "type": "game",
+    "stars": 3
   },
   {
     "title": "Snake",

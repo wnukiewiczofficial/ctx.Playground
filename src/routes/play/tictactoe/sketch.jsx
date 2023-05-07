@@ -13,9 +13,11 @@ export default function TicTacToe() {
   let stopped = false; // If the game is stopped or players are playing
 
   let p5;
+  let cnvParent;
 
   const setup = (_p5, canvasParentRef) => {
     p5 = _p5;
+    cnvParent = canvasParentRef;
     const cnv = p5
       .createCanvas(
         canvasParentRef.parentElement.clientWidth,
@@ -23,7 +25,7 @@ export default function TicTacToe() {
       )
       .parent(canvasParentRef);
 
-    boardSize = p5.width * 0.6; // It's boards size 60% of canvasp5.width
+    boardSize = p5.min(p5.width, p5.height) * 0.6; // It's boards size 60% of canvas width or height
     cellSize = boardSize / 3; // Its single cell size 33% of board size
     p5.rectMode(p5.CENTER); // Every rect drawn on the screen is centered
 
@@ -36,7 +38,7 @@ export default function TicTacToe() {
       }
     }
 
-    cnv.mouseClicked((event) => {
+    cnv.mouseClicked(() => {
       console.log("first");
       if (!stopped) {
         for (let i = 0; i < 3; i++) {
@@ -66,21 +68,40 @@ export default function TicTacToe() {
         p5.stroke(themeColor);
         p5.strokeWeight(1);
         p5.fill(themeColor);
-        p5.textSize(80);
-        p5.textAlign(p5.LEFT, p5.TOP);
+        p5.textSize(cellSize * 0.5);
+        p5.textAlign(p5.CENTER, p5.MIDDLE);
         p5.text(
           fields[i][j].value,
-          fields[i][j].x + fields[i][j].size / 4,
-          fields[i][j].y + fields[i][j].size / 4,
+          fields[i][j].x + fields[i][j].size / 8,
+          fields[i][j].y + fields[i][j].size / 8,
           fields[i][j].size,
           fields[i][j].size
         );
       }
     }
-
+    p5.textAlign(p5.LEFT, p5.TOP);
     drawBoard();
     if (!stopped) Info();
     else Result();
+  };
+
+  const windowResized = () => {
+    p5.resizeCanvas(
+      cnvParent.parentElement.clientWidth,
+      cnvParent.parentElement.clientHeight
+    );
+
+    boardSize = p5.min(p5.width, p5.height) * 0.6;
+    cellSize = boardSize / 3;
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+        fields[i][j].x =
+          p5.width / 2 - boardSize / 2 + cellSize / 2 + i * cellSize;
+        fields[i][j].y =
+          p5.height / 2 - boardSize / 2 + cellSize / 2 + j * cellSize;
+        fields[i][j].size = cellSize * 0.6;
+      }
+    }
   };
 
   function checkValues() {
@@ -165,7 +186,12 @@ export default function TicTacToe() {
     p5.textAlign(p5.CENTER);
     p5.stroke(0);
     p5.strokeWeight(3);
-    p5.text("TIC TAC TOE", p5.width / 2, p5.textAscent());
+    p5.textSize(boardSize * 0.2);
+    p5.text(
+      "TIC TAC TOE",
+      p5.width / 2,
+      p5.max(p5.height / 2 - boardSize / 2 - p5.textAscent() * 1.5, 0)
+    );
 
     p5.stroke(themeColor);
     p5.strokeWeight(4);
@@ -199,11 +225,14 @@ export default function TicTacToe() {
     p5.stroke(0);
     p5.strokeWeight(3);
     p5.fill(themeColor);
-    p5.textSize(60);
+    p5.textSize(boardSize * 0.1);
     p5.text(
       "It's turn for " + turn,
       p5.width / 2,
-      p5.height - p5.textAscent() * 2
+      p5.min(
+        p5.height / 2 + boardSize / 2 + p5.textAscent() * 0.7,
+        p5.height - p5.textAscent()
+      )
     );
   }
 
@@ -216,5 +245,5 @@ export default function TicTacToe() {
     p5.text("Winner is " + winner, p5.width / 2, p5.height - p5.textAscent());
   }
 
-  return <Sketch setup={setup} draw={draw} />;
+  return <Sketch setup={setup} draw={draw} windowResized={windowResized} />;
 }

@@ -6,7 +6,10 @@ export default function TemplatePlayground({ game }) {
   return (
     <section className=" w-full h-full text-accent overflow-hidden flex flex-col gap-8 mt-20 lg:mt-0 py-6 lg:py-12 px-12 md:px-32 lg:px-12 text-center lg:text-left">
       {/* Title */}
-      <h1 className="text-3xl lg:text-5xl font-semibold">{game.title}</h1>
+      <div className="flex items-end gap-4">
+        <h1 className="text-3xl lg:text-5xl font-semibold">{game.title}</h1>
+        <span>({game.type})</span>
+      </div>
 
       {/* Tags */}
       <div className="w-full flex gap-4 items-center">
