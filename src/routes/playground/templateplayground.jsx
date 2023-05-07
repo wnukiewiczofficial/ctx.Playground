@@ -31,7 +31,7 @@ export default function TemplatePlayground({ game }) {
 
       {/* Tags */}
       <div className="w-full flex gap-4 items-center justify-center">
-        <span className="bg-accent flex items-center h-full text-main px-4 font-semibold rounded">
+        <span className="bg-accent flex items-center h-full text-main px-4 font-semibold rounded z-10">
           Tags
         </span>
         <div className="flex flex-wrap gap-1">
@@ -46,7 +46,7 @@ export default function TemplatePlayground({ game }) {
       </div>
 
       {/* Gallery */}
-      <div className="w-full xl:w-3/4 place-self-center grid grid-cols-1 md:grid-cols-2 gap-4 place-content-center place-items-center">
+      <div className="w-full xl:w-3/4 place-self-center grid grid-cols-1 md:grid-cols-2 gap-4 place-content-center place-items-center z-10">
         {game.images.map((image, i) => {
           return (
             <div
@@ -68,11 +68,13 @@ export default function TemplatePlayground({ game }) {
       </div>
 
       {/* Description */}
-      <p className="text-xl lg:text-2xl lg:px-12 py-4">{game.description}</p>
+      <p className="text-xl lg:text-2xl lg:px-12 py-4 z-10">
+        {game.description}
+      </p>
       {/* Play button */}
       <Link
-        className="hover:opacity-80 active:opacity-60 transition-opacity duration-200"
-        to={`/ctx.Playground/play/${game.name}`}
+        className="hover:opacity-80 active:opacity-60 transition-opacity duration-200 z-10"
+        to={`/play/${game.name}`}
         onMouseEnter={() => {
           gradientRef.current.classList.add("-translate-y-[10%]");
         }}

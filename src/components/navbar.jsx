@@ -41,10 +41,7 @@ export default function NavBar({ gameDatabase }) {
   return (
     <nav className="fixed lg:static lg:flex lg:flex-col w-full lg:w-auto lg:h-full text-center">
       <div className="flex h-20 bg-main place-items-center justify-between p-6">
-        <Link
-          to="/ctx.Playground/playground"
-          onClick={() => setSelectedTab(null)}
-        >
+        <Link to="/playground" onClick={() => setSelectedTab(null)}>
           <Logo />
         </Link>
         <RiMenu3Fill

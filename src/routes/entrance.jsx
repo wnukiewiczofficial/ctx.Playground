@@ -16,7 +16,7 @@ export default function Entrance() {
         <span className="text-accentTwo">ctx.</span>
         <span className="text-accent">Playground</span>
       </h1>
-      <Link to="/ctx.Playground/playground">
+      <Link to="/playground">
         <Button>Go to the playground</Button>
       </Link>
     </section>

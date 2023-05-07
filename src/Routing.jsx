@@ -65,9 +65,9 @@ export default function Routing() {
   return (
     <main className="w-screen h-screen bg-main font-chakra color">
       <Routes>
-        <Route path="/ctx.Playground" element={<Entrance />} />
+        <Route path="/" element={<Entrance />} />
         <Route
-          path="/ctx.Playground/playground"
+          path="/playground"
           element={<Playground gameDatabase={gameDatabase} />}
         >
           <Route index element={<IndexPlayground />} />
@@ -89,7 +89,7 @@ export default function Routing() {
           })}
           <Route path="*" element={<IndexPlayground />} />
         </Route>
-        <Route path="/ctx.Playground/play" element={<Play />}>
+        <Route path="/play" element={<Play />}>
           {gameDatabase.map((game, i) => {
             const Game = gameComponents[game.name];
             return Game ? (
