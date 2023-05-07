@@ -2,10 +2,12 @@
 import Button from "../../components/button";
 import { Link } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai";
+import { useRef } from "react";
 
 export default function TemplatePlayground({ game }) {
+  const gradientRef = useRef();
   return (
-    <section className=" w-full h-full text-accent overflow-auto flex flex-col gap-8 mt-20 lg:mt-0 py-6 lg:py-12 px-12 md:px-32 lg:px-12 text-center">
+    <section className="w-full h-full text-accent overflow-auto flex flex-col gap-8 mt-20 lg:mt-0 py-6 lg:py-12 px-12 md:px-32 lg:px-12 text-center">
       {/* Title */}
       <div className="flex items-end gap-4 justify-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold">
@@ -66,11 +68,33 @@ export default function TemplatePlayground({ game }) {
       </div>
 
       {/* Description */}
-      <p className="text-xl lg:px-12 py-4">{game.description}</p>
+      <p className="text-xl lg:text-2xl lg:px-12 py-4">{game.description}</p>
       {/* Play button */}
-      <Link to={`/play/${game.name}`}>
+      <Link
+        className="hover:opacity-80 active:opacity-60 transition-opacity duration-200"
+        to={`/play/${game.name}`}
+        onMouseEnter={() => {
+          gradientRef.current.classList.add("-translate-y-[10%]");
+        }}
+        onMouseLeave={() => {
+          gradientRef.current.classList.remove("-translate-y-[20%]");
+          gradientRef.current.classList.remove("-translate-y-[10%]");
+        }}
+        onMouseDown={() => {
+          gradientRef.current.classList.add("-translate-y-[20%]");
+        }}
+        onMouseUp={() => {
+          gradientRef.current.classList.remove("-translate-y-[20%]");
+        }}
+      >
         <Button>Play</Button>
       </Link>
+
+      {/* Gradient */}
+      <div
+        ref={gradientRef}
+        className="fixed w-screen left-0 lg:left-auto lg:w-full h-[300%] top-full bg-gradient-to-t from-accent overflow-hidden transition-all duration-300"
+      ></div>
     </section>
   );
 }

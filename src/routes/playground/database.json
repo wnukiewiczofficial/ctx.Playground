@@ -1,7 +1,7 @@
 [
   {
     "title": "Art by Line",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Experience the mesmerizing beauty of Art by Line, a fully responsive and interactive sketch that creates stunning masterpieces with colorful lines, automatically. Enjoy this innovative sketching experience on any device and let your imagination run wild!",
     "playgroundTo": "/playground/artbyline",
     "playTo": "/play/artbyline",
     "name": "artbyline",
@@ -28,7 +28,7 @@
   },
   {
     "title": "Fill the triangle",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Get ready for a thrilling challenge with Fill the Triangle! In this addictive game, your goal is to fill the triangle with red paint without going outside the lines. With a fixed canvas size of a certain pixel amount, every pixel is calculated to ensure your success. Fill the Triangle will keep you entertained for hours on end. Test your skills and see how far you can go without losing. Play now and see if you have what it takes to conquer Fill the Triangle!",
     "playgroundTo": "/playground/fillthetriangle",
     "playTo": "/play/fillthetriangle",
     "name": "fillthetriangle",
@@ -53,7 +53,7 @@
   },
   {
     "title": "Paint",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Let your creativity soar with Paint! This simple program allows you to draw or write anything you desire with a classic black line. Clear the canvas with a single press of the space bar and start anew. With no additional features to distract you, Paint provides a pure and fulfilling drawing experience. Try it out today and unleash your artistic potential!",
     "playgroundTo": "/playground/paint",
     "playTo": "/play/paint",
     "name": "paint",
@@ -76,7 +76,7 @@
   },
   {
     "title": "Music Visualizer",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Experience the magic of Music Visualizer, the innovative program that brings your music to life! With Music Visualizer, you can upload any sound or music of your choice and play it at your preferred volume. Watch in amazement as every significant element of the sound is transformed into vibrant shapes and colors, reacting to changes in frequency and amplitude. Immerse yourself in the beauty of your music like never before with Music Visualizer. Try it now and prepare to be amazed!",
     "playgroundTo": "/playground/musicvisualizer",
     "playTo": "/play/musicvisualizer",
     "name": "musicvisualizer",
@@ -106,7 +106,7 @@
   },
   {
     "title": "Trader",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Enter the fast-paced world of Trader, the exciting game that puts your decision-making skills to the test! Choose between buying or selling as you pass stocks through the indicator to increase your score. But beware, selecting the wrong option when a stock passes through the indicator will result in a loss. Keep an eye out for the square that bounces around the screen to switch between buying and selling. Watch out for falling coins and bombs - coins can be clicked for extra play time, but clicking on a bomb means game over. With custom images and assets, Trader will keep you hooked for hours on end. Play now and see if you have what it takes to become the ultimate Trader!",
     "playgroundTo": "/playground/trader",
     "playTo": "/play/trader",
     "name": "trader",
@@ -139,7 +139,7 @@
   },
   {
     "title": "Tic Tac Toe",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Experience the timeless game of Tic Tac Toe with my recreation! The sketch clearly indicates whose turn it is to play, and the game is designed to be playable on any device. Whether you're on the go or just looking for a quick and fun game, Tic Tac Toe is the perfect choice. Play now and challenge your friends to see who's the ultimate Tic Tac Toe champion!",
     "playgroundTo": "/playground/tictactoe",
     "playTo": "/play/tictactoe",
     "name": "tictactoe",
@@ -165,7 +165,7 @@
   },
   {
     "title": "The Clock",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "The clock displays the user's current local time in both digital and analog formats with high accuracy. It is designed to be scalable and responsive, making it accessible on any device. Whether one needs to keep track of time while working or simply wants to stay on schedule, the clock is the perfect tool. Try it out now and stay punctual!",
     "playgroundTo": "/playground/theclock",
     "playTo": "/play/theclock",
     "name": "theclock",
@@ -217,7 +217,7 @@
   },
   {
     "title": "Chase the ball",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Chase the Ball is an exciting game where players must guide their mouse to the goal ball using a red line as their guide. Game offers different levels of difficulty with varying ball sizes, speeds, and opacities. Players must avoid hitting the wrong ball or risk losing the game. Can you conquer all the levels and emerge victorious? Play Chase the Ball now to find out!",
     "playgroundTo": "/playground/chasetheball",
     "playTo": "/play/chasetheball",
     "name": "chasetheball",
@@ -319,7 +319,7 @@
   },
   {
     "title": "Delivery Truck",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Delivery Truck is a thrilling game where you become a delivery driver on a mission to drop off packages at different houses. The catch? You'll have to avoid incoming traffic by quickly switching lanes. Your score is determined by the number of successful deliveries you make. Keep an eye out for cars coming at different speeds and plan your moves carefully to make it to your destination without incident.",
     "playgroundTo": "/playground/deliverytruck",
     "playTo": "/play/deliverytruck",
     "name": "deliverytruck",
@@ -353,7 +353,7 @@
   },
   {
     "title": "Dino AI",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Dino AI is a fully automatic recreation of the classic Chrome Dino game. Sit back and watch as the dino jumps and crouches on his own, while the visible counters keep track of the time passed and time remaining. Perfect for streaming and entertaining viewers.",
     "playgroundTo": "/playground/dinoai",
     "playTo": "/play/dinoai",
     "name": "dinoai",
@@ -382,7 +382,7 @@
   },
   {
     "title": "Flappy",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Flappy is a fun and addictive game that brings back the nostalgia of the popular Flappy Bird game. The game uses the original assets, so you can enjoy the same classic gameplay with the same familiar graphics. Your goal is to fly the bird as far as you can by tapping the screen to flap the bird's wings and avoid the pipes that block your way. Whether you're a fan of the original Flappy Bird or just looking for a fun and challenging game, Flappy is sure to keep you entertained.",
     "playgroundTo": "/playground/flappy",
     "playTo": "/play/flappy",
     "name": "flappy",
@@ -412,7 +412,7 @@
   },
   {
     "title": "Minesweeper",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Minesweeper is a classic game that challenges players to reveal hidden cells without detonating any bombs. Our Minesweeper recreation features a sleek custom design that enhances the gaming experience. With just a few clicks of the mouse, users can reveal cells or flag bombs with ease. The game offers different difficulty levels to suit players of all skill levels, from beginners to experts. Whether you're looking to pass the time or exercise your strategic thinking skills, our Minesweeper game is the perfect choice.",
     "playgroundTo": "/playground/minesweeper",
     "playTo": "/play/minesweeper",
     "name": "minesweeper",
@@ -442,7 +442,7 @@
   },
   {
     "title": "Platform Hills",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Platform Hills is a charming 2D platformer that lets players explore a colorful world filled with coins to collect and obstacles to overcome. With simple controls that allow for movement left and right and jumping over holes with dangerous spikes, players can enjoy a nostalgic gaming experience. The game features spritsheet, audio, and animations, making it a delightful and engaging journey for all.",
     "playgroundTo": "/playground/platformhills",
     "playTo": "/play/platformhills",
     "name": "platformhills",
@@ -477,7 +477,7 @@
   },
   {
     "title": "The Pong",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Experience the nostalgia of the classic Pong game with our recreation, The Pong! Play against an AI opponent with three levels of difficulty to choose from. The game features the original advanced bouncing system, where the ball curves based on its distance from the paddle center, creating an exciting challenge for players. As the game progresses, the ball speeds up, making it harder to keep up with. With full device compatibility, you can play The Pong anytime, anywhere.",
     "playgroundTo": "/playground/thepong",
     "playTo": "/play/thepong",
     "name": "thepong",
@@ -507,7 +507,7 @@
   },
   {
     "title": "Shark bits",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Shark Bits is an exciting game where you take control of a shark holding a gun, trying to navigate through the treacherous waters while avoiding dangerous sea creatures. If things get too tough, you can shoot your way out of trouble and clear the path ahead. However, be careful not to lose your three lives by hitting any obstacles! And just when you think you've got the hang of things, the final boss, a powerful Sea God armed with infinite tridents, emerges to make things even more challenging. But don't worry, with some persistence, you can defeat the boss and claim victory! This game is available to play on any device.",
     "playgroundTo": "/playground/sharkbits",
     "playTo": "/play/sharkbits",
     "name": "sharkbits",
@@ -552,7 +552,7 @@
   },
   {
     "title": "Radar Chart",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Radar Chart is an interactive program that beautifully visualizes data in a radar chart format. Simply select a stock and its data is instantly displayed on the chart. The program's user-friendly interface and dynamic charting capabilities make it easy to showcase complex data in a clear and concise way.",
     "playgroundTo": "/playground/radarchart",
     "playTo": "/play/radarchart",
     "name": "radarchart",
@@ -575,7 +575,7 @@
   },
   {
     "title": "Tag Game",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Tag Game is an exciting two-player game that offers endless hours of fun. Each player can choose their own character name, adding a personal touch to the game. The game involves one player chasing the other to pass on a bomb. If the chased player manages to avoid the other for 8 seconds, the player with the bomb loses as the bomb explodes. The game features original physics and bouncing mechanics that make the gameplay even more enjoyable.",
     "playgroundTo": "/playground/taggame",
     "playTo": "/play/taggame",
     "name": "taggame",
@@ -603,7 +603,7 @@
   },
   {
     "title": "Snake",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Snake is a classic game designed to provide a relaxing and calming experience. The game has a smooth movement and the user can collect food without any limit, allowing them to focus on enjoying the gameplay. Unlike other versions, Snake does not track points or time, making it an ideal choice for those who want to unwind and de-stress.",
     "playgroundTo": "/playground/snake",
     "playTo": "/play/snake",
     "name": "snake",

@@ -1,4 +1,3 @@
-import Logo from "../components/logo";
 import Button from "../components/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -13,7 +12,10 @@ export default function Entrance() {
 
   return (
     <section className="w-full h-full flex flex-col place-content-center place-items-center gap-6">
-      <Logo />
+      <h1 className="font-bold text-5xl md:text-6xl lg:text-8xl">
+        <span className="text-accentTwo">ctx.</span>
+        <span className="text-accent">Playground</span>
+      </h1>
       <Link to="/playground">
         <Button>Go to the playground</Button>
       </Link>
