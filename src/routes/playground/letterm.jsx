@@ -82,7 +82,7 @@ export default function LetterMPlayground({ game }) {
       </div>
 
       {/* Description */}
-      <p className="text-xl px-12 py-4">{game.description}</p>
+      <p className="text-xl lg:text-2xl px-12 py-4">{game.description}</p>
 
       {/* Gallery */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-12 place-content-center">
@@ -90,7 +90,11 @@ export default function LetterMPlayground({ game }) {
           return (
             <figure key={i} className="text-2xl font-semibold">
               <figcaption className="ml-4">{letter.name}</figcaption>
-              <img src={letter.src} alt={letter.name + " M"} />
+              <img
+                src={letter.src}
+                alt={letter.name + " M"}
+                className="rounded-lg"
+              />
             </figure>
           );
         })}
