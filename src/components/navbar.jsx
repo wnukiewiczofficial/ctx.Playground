@@ -39,7 +39,7 @@ export default function NavBar({ gameDatabase }) {
   }, [navOpen]);
 
   return (
-    <nav className="fixed lg:static lg:flex lg:flex-col w-full lg:w-auto lg:h-full text-center">
+    <nav className="fixed lg:static lg:flex lg:flex-col w-full lg:w-auto lg:h-full text-center z-50">
       <div className="flex h-20 bg-main place-items-center justify-between p-6">
         <Link to="/playground" onClick={() => setSelectedTab(null)}>
           <Logo />

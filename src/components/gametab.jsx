@@ -28,7 +28,7 @@ export default function GameTab({
           "flex items-center justify-between lg:gap-4 transition-all duration-200 lg:rounded-r-lg lg:pl-6 " +
           (selected
             ? "bg-accent text-main lg:active:pl-4"
-            : "bg-main text-accent hover:pl-12 active:pl-16 hover:bg-accent/20 hover:text-accentTwo")
+            : "text-accent hover:pl-12 active:pl-16 hover:bg-accent/20 hover:text-accentTwo")
         }
       >
         {children}

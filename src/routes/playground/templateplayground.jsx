@@ -30,8 +30,8 @@ export default function TemplatePlayground({ game }) {
       </div>
 
       {/* Tags */}
-      <div className="w-full flex gap-4 items-center justify-center">
-        <span className="bg-accent flex items-center h-full text-main px-4 font-semibold rounded z-10">
+      <div className="w-full flex gap-4 items-center justify-center static z-10">
+        <span className="bg-accent flex items-center h-full text-main px-4 font-semibold rounded">
           Tags
         </span>
         <div className="flex flex-wrap gap-1">
@@ -79,14 +79,14 @@ export default function TemplatePlayground({ game }) {
           gradientRef.current.classList.add("-translate-y-[10%]");
         }}
         onMouseLeave={() => {
-          gradientRef.current.classList.remove("-translate-y-[20%]");
+          gradientRef.current.classList.remove("-translate-y-[30%]");
           gradientRef.current.classList.remove("-translate-y-[10%]");
         }}
         onMouseDown={() => {
-          gradientRef.current.classList.add("-translate-y-[20%]");
+          gradientRef.current.classList.add("-translate-y-[30%]");
         }}
         onMouseUp={() => {
-          gradientRef.current.classList.remove("-translate-y-[20%]");
+          gradientRef.current.classList.remove("-translate-y-[30%]");
         }}
       >
         <Button>Play</Button>
@@ -95,7 +95,7 @@ export default function TemplatePlayground({ game }) {
       {/* Gradient */}
       <div
         ref={gradientRef}
-        className="fixed w-screen left-0 lg:left-auto lg:w-full h-[300%] top-full bg-gradient-to-t from-accent overflow-hidden transition-all duration-300"
+        className="fixed w-screen left-0  lg:w-full h-[300%] top-full bg-gradient-to-t from-accent overflow-hidden transition-all duration-300"
       ></div>
     </section>
   );

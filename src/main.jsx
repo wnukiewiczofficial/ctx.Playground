@@ -5,7 +5,7 @@ import Routing from "./Routing";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/ctx.Playground">
     <Routing />
   </BrowserRouter>
 );
