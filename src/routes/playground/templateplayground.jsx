@@ -68,7 +68,7 @@ export default function TemplatePlayground({ game }) {
       </div>
 
       {/* Description */}
-      <p className="text-xl lg:text-2xl lg:px-12 py-4 z-10">
+      <p className="text-lg lg:text-xl lg:px-12 py-4 z-10">
         {game.description}
       </p>
       {/* Play button */}
