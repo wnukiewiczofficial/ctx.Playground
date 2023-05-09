@@ -14,11 +14,13 @@ import {
   players,
 } from "./globals";
 import Menu from "./start";
+import backgroundMenu from "./backgroundMenu.jpg";
+import backgroundGame from "./backgroundGame.jpg";
 
 export default function TagGame() {
   const preload = (_p5) => {
-    menuBackgroundImg.set(_p5.loadImage("/taggame/backgroundMenu.jpg"));
-    gameBackgroundImg.set(_p5.loadImage("/taggame/backgroundGame.jpg"));
+    menuBackgroundImg.set(_p5.loadImage(backgroundMenu));
+    gameBackgroundImg.set(_p5.loadImage(backgroundGame));
     titleFont.set(
       _p5.loadFont("https://fonts.cdnfonts.com/s/5757/eurcntrc.woff")
     );
