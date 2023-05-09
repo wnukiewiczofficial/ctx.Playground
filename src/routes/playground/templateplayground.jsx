@@ -60,7 +60,7 @@ export default function TemplatePlayground({ game }) {
               <img
                 src={image}
                 alt={game.title + " " + i}
-                className="h-40 md:h-50 lg:h-60 xl:h-72 rounded-lg"
+                className="w-full rounded-lg"
               />
             </div>
           );

@@ -54,7 +54,7 @@ export default function NavBar({ gameDatabase }) {
       <ul
         ref={navRef}
         style={{ transform: "translateY(-100%)" }}
-        className={`lg:hidden overflow-auto bg-main fixed z-[-1] w-full grid grid-cols-2 md:grid-cols-3 p-6 gap-6`}
+        className={`lg:hidden overflow-auto bg-main fixed z-[-1] w-full grid grid-cols-2 md:grid-cols-3 p-6 gap-6 items-center`}
       >
         {games.map((game, i) => {
           return (
