@@ -246,7 +246,7 @@
   },
   {
     "title": "The Casino",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales erat in ipsum tristique, sed venenatis velit rhoncus. Aenean vitae massa vel mauris gravida fringilla eu ut turpis. Sed vestibulum tristique lacus, eu efficitur magna sollicitudin id. Etiam vulputate tincidunt.",
+    "description": "Step into the world of high-stakes gaming with our addictive casino game! With the potential to be introduced into real casinos, our game will keep you on the edge of your seat. The goal is simple: collect as many points as possible, but luck and focus will play a big part in your success. Now, let's dive into the gameplay. The playable fields are located at the bottom of the board, and each field corresponds to the entire column above it. Your task is to find three matching numbers in the same column as your playable field. If you're unlucky, the value of your playable field won't match the other fields in the column, and you'll have to skip that round. However, when the fields do match, you can click on the playable field and remove it from the board. Keep an eye out for special blocks that can appear in the playable fields, which allow you to remove any nonplayable field from the board. Remember, you can't remove two fields from the same column in one round. There are 13 rounds in total, and the key to success is removing the most nonplayable fields possible. Removing a whole row, column, or diagonal will give you bonus points. At the end of the game, you'll choose random fields from a new board that contains hidden bonus percentages.",
     "playgroundTo": "/playground/casino",
     "playTo": "/play/casino",
     "name": "casino",
