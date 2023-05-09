@@ -3,7 +3,7 @@ import HtmlLogo from "../../assets/html5-logo.png";
 
 export default function IndexPlayground() {
   return (
-    <section className="w-full h-full text-accent overflow-auto flex flex-col gap-8 mt-20 lg:mt-0 py-6 lg:py-12 px-12 md:px-32 lg:px-12 text-center">
+    <section className="w-full h-full text-accent overflow-auto flex flex-col items-center gap-8 mt-20 lg:mt-0 py-6 lg:py-12 px-12 md:px-32 lg:px-12 text-center">
       <h1 className="text-accent text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold">
         Welcome to <span className="text-accentTwo">ctx.</span>Playground!
       </h1>
